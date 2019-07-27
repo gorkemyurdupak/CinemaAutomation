@@ -8,6 +8,6 @@ namespace Project.BLL.SingletonPattern
 {
     public class DBTool
     {
-
+        
     }
 }
