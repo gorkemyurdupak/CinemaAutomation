@@ -45,8 +45,6 @@
     <Compile Include="SingletonPattern\Class1.cs" />
     <Compile Include="SingletonPattern\DBTool.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RepositoryPattern\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
