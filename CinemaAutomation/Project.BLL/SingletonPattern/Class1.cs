@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.SingletonPattern
 {
-    class Class1
+    public class Class1
     {
+        public int ID { get; set; }
     }
 }
