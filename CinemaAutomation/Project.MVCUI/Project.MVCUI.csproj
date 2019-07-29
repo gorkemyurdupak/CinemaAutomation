@@ -117,7 +117,8 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="AuthenticationClasses\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Models\MyTools\" />
+    <Folder Include="OuterTools\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
