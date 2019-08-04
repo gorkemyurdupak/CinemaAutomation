@@ -19,10 +19,13 @@ namespace Project.MODEL.Entities
 
         public DataStatus Status { get; set; }
 
+        public Role UserRole { get; set; }
+
         public BaseEntity()
         {
             CreatedDate = DateTime.Now;
             Status = DataStatus.Inserted;
+            UserRole = Role.Visitor;
         }
     }
 }
