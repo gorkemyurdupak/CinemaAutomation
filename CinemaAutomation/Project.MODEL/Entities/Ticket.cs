@@ -8,5 +8,8 @@ namespace Project.MODEL.Entities
 {
     public class Ticket
     {
+        public int TicketID { get; set; }
+        public decimal TicketPrice { get; set; }
+
     }
 }

@@ -15,6 +15,9 @@ namespace Project.MODEL.Entities
         public string UserName { get; set; }
         public string Password { get; set; }
 
-      
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public decimal Phone { get; set; } //fluentapi ile kısıtlama yapılıyordu galiba.Hangisi olduğunu bulup buraya max girilecek karakter yapılmalı.
+
     }
 }
