@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.MODEL.Entities
+namespace Project.MODEL.Enums
 {
-    public class Customer:AppUser
+    public enum DataStatus
     {
-
-
+        Inserted=1,Deleted=2,Updated=3
     }
 }

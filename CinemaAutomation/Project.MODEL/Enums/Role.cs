@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.MODEL.Entities
+namespace Project.MODEL.Enums
 {
-    public class Customer:AppUser
+    public enum Role
     {
-
-
+        Admin=1,Member=2,Visitor=3
     }
 }

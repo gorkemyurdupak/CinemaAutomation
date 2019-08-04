@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class Customer:AppUser
+   public class VIPMember
     {
-
-
     }
 }
