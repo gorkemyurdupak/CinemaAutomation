@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class Salon
+    public class MovieSalonSeans
     {
+        public int MovieSalonSeansID { get; set; }
+        public int SeansID { get; set; }
         public int SalonID { get; set; }
-        public string SalonName { get; set; }
-        public decimal Capacity { get; set; }
+        public int MovieID { get; set; }
+
     }
 }

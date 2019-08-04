@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-   public class Genre
+    public class Seans
     {
-        public int GenreID { get; set; }
-        public string GenreName { get; set; }
-        public string Description { get; set; }
+        public int SeansID { get; set; }
+        public DateTime? MovieTime { get; set; }
     }
 }
