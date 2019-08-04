@@ -1,0 +1,6 @@
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\bin\Debug\Project.COMMON.dll
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\bin\Debug\Project.COMMON.pdb
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\obj\Debug\Project.COMMON.csprojAssemblyReference.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\obj\Debug\Project.COMMON.csproj.CoreCompileInputs.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\obj\Debug\Project.COMMON.dll
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.COMMON\obj\Debug\Project.COMMON.pdb

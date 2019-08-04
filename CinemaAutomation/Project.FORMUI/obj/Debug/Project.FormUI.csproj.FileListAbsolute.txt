@@ -1,0 +1,9 @@
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.exe.config
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.exe
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.pdb
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csprojAssemblyReference.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.Properties.Resources.resources
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csproj.GenerateResource.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csproj.CoreCompileInputs.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.exe
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.pdb

@@ -1,0 +1,6 @@
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\bin\Debug\Project.DAL.dll
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\bin\Debug\Project.DAL.pdb
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csprojAssemblyReference.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CoreCompileInputs.cache
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.dll
+F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.pdb
