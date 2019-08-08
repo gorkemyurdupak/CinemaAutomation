@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class Ticket
+    public class Ticket: BaseEntity
     {
         public int TicketID { get; set; }
         public decimal TicketPrice { get; set; }

@@ -41,20 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\AppUser.cs" />
-    <Compile Include="Entities\BaseEntity.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Discount.cs" />
-    <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\Genre.cs" />
-    <Compile Include="Entities\Movie.cs" />
-    <Compile Include="Entities\MovieSalonSeans.cs" />
-    <Compile Include="Entities\Sales.cs" />
-    <Compile Include="Entities\Salon.cs" />
-    <Compile Include="Entities\Seans.cs" />
-    <Compile Include="Entities\Seat.cs" />
-    <Compile Include="Entities\Ticket.cs" />
-    <Compile Include="Entities\VIPMember.cs" />
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

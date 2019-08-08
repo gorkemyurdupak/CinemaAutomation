@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class Seans
+    public class Seans: BaseEntity
     {
         public int SeansID { get; set; }
         public DateTime? MovieTime { get; set; }

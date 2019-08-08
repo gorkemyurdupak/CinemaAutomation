@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class VIPMember
+    public class VIPMember: BaseEntity
     {
     }
 }

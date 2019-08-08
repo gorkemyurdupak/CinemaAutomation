@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-   public class Sales
+   public class Sales:BaseEntity
     {
+        public decimal MoviePrice { get; set; }
     }
 }

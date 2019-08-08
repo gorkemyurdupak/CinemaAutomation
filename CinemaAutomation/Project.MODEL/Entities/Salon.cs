@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-    public class Salon
+    public class Salon: BaseEntity
     {
         public int SalonID { get; set; }
         public string SalonName { get; set; }

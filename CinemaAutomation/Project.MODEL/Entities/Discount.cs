@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-   public class Discount
+   public class Discount: BaseEntity
     {
+
     }
 }

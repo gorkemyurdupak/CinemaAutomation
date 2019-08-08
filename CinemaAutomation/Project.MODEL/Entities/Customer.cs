@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Project.MODEL.Entities
 {
-   public class Customer:AppUser
+   public class Customer: BaseEntity
     {
-        public bool IsBanned { get; set; }
+        
 
     }
 }
