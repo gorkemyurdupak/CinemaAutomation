@@ -16,6 +16,6 @@ namespace Project.MODEL.Entities
 
         public int Phone { get; set; }
        
-        public decimal Salonİnt { get; set; } //salon sayısı
+        public decimal SalonNumber { get; set; } //salon sayısı
     }
 }
