@@ -58,6 +58,7 @@
     <Compile Include="Entities\VIPMember.cs" />
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\Role.cs" />
+    <Compile Include="Enums\SexStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

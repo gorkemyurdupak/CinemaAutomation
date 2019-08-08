@@ -10,6 +10,15 @@ namespace Project.MODEL.Entities
     {
         public int TicketID { get; set; }
         public decimal TicketPrice { get; set; }
+        public decimal TicketCount { get; set; }
+
+        public Ticket()
+        {
+            TicketCount++;
+        }
+
+        //Relational Properties
+        public virtual Movie Movie { get; set; }
 
     }
 }

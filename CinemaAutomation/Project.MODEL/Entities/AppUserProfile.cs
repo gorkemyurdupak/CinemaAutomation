@@ -11,16 +11,10 @@ namespace Project.MODEL.Entities
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public decimal Age { get; set; }
-        public Role UserRole { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
         public decimal Phone { get; set; } //fluentapi ile kısıtlama yapılıyordu galiba.Hangisi olduğunu bulup buraya max girilecek karakter yapılmalı.
-
-        public AppUserProfile()
-        {
-            UserRole = Role.Visitor;
-        }
-
+        public SexStatus Sex { get; set; }
+        public DateTime BirthDate { get; set; }
     }
 }
