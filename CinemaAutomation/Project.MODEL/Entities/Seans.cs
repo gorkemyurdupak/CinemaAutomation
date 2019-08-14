@@ -10,5 +10,9 @@ namespace Project.MODEL.Entities
     {
         public int SeansID { get; set; }
         public DateTime? MovieTime { get; set; }
+
+        //Relational Properties
+
+        public virtual List<Salon> Salons { get; set; } //Örneğin saat 11.00 seansının birden fazla salonda olması.
     }
 }

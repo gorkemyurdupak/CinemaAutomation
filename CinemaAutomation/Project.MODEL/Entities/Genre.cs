@@ -11,5 +11,9 @@ namespace Project.MODEL.Entities
         public int GenreID { get; set; }
         public string GenreName { get; set; }
         public string Description { get; set; }
+
+        //Relational Properties
+
+        public virtual List<Movie> Movies { get; set; }
     }
 }

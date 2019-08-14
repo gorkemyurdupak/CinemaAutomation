@@ -25,5 +25,10 @@ namespace Project.MODEL.Entities
             ActivationCode = Guid.NewGuid();
 
         }
+
+        //Relational Properties
+
+        public virtual AppUserProfile AppUserProfile { get; set; }
+
     }
 }

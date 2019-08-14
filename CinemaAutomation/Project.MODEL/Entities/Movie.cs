@@ -12,7 +12,7 @@ namespace Project.MODEL.Entities
         public string MovieName { get; set; }
         public decimal ScreenTime { get; set; }
         public DateTime ShowDate { get; set; }
-        public Genre MovieGenre { get; set; }
+        //public Genre MovieGenre { get; set; } //Relational'da olmalı ?
         public decimal SalonNumber { get; set; }
         public string ImagePath { get; set; }
         public string Director { get; set; }
@@ -24,7 +24,9 @@ namespace Project.MODEL.Entities
 
         //Relational Properties
         public virtual List<Ticket> Tickets { get; set; }
-
+        public virtual List<Salon> Salons { get; set; }
+        public virtual Genre MovieGenre { get; set; }
+        public virtual Cinema Cinema { get; set; } //hangi sinemada oynayacağı , örn : akasya avm.
 
 
     }

@@ -12,5 +12,13 @@ namespace Project.MODEL.Entities
         public string CinemaName { get; set; }
         public string CinemaAddress { get; set; }
         public decimal CinemaPhone { get; set; }
+
+        //Relational Properties
+
+        public virtual List<Movie> Movies { get; set; }
+        public virtual List<Salon> Salons { get; set; }
+        public virtual List<Seans> Seans { get; set; }
+        public virtual List<Employee> Employees { get; set; } //Buna gerek olmayabilir.Cinemaximum gibi eğer sadece bilet satın alma işlemleri için kullanacaksak,bu ekstra bir class olur.Ancak bir sinemada çalışanların da olması gerekir.Belirli olan sinemaya (akasya avm vb.) eklenecek filmleri girecek olan çalışanlar olmalıdır.
+        
     }
 }

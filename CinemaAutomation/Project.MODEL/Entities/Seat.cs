@@ -12,5 +12,9 @@ namespace Project.MODEL.Entities
         public int ChairID { get; set; }
         public decimal ChairNumber { get; set; } // Hangi Numara olduğu => G-1 ,F-3 .. 
         public decimal ChairLetter { get; set; } //Hangi sıra olduğu e-f-g  vs...
+
+        //Relational Properties
+
+        public virtual List<Salon> Salons { get; set; }
     }
 }

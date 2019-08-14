@@ -16,5 +16,9 @@ namespace Project.MODEL.Entities
         public decimal Phone { get; set; } //fluentapi ile kısıtlama yapılıyordu galiba.Hangisi olduğunu bulup buraya max girilecek karakter yapılmalı.
         public SexStatus Sex { get; set; }
         public DateTime BirthDate { get; set; }
+
+        //Relational Properties
+
+        public virtual AppUser AppUser { get; set; }
     }
 }
