@@ -20,5 +20,9 @@ namespace Project.MODEL.Entities
         //Relational Properties
         public virtual Movie Movie { get; set; }
 
+        public virtual Employee Employee { get; set; } //bileti kesen kasiyerin ismi fişte yazacak.
+
+
+
     }
 }
