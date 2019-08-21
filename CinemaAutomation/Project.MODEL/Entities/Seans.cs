@@ -13,6 +13,6 @@ namespace Project.MODEL.Entities
 
         //Relational Properties
 
-        public virtual List<Salon> Salons { get; set; } //Örneğin saat 11.00 seansının birden fazla salonda olması.
+        //public virtual List<Salon> Salons { get; set; } //Örneğin saat 11.00 seansının birden fazla salonda olması.
     }
 }

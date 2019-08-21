@@ -15,7 +15,7 @@ namespace Project.MODEL.Entities
         //Relational Properties
 
         public virtual Movie Movie { get; set; }
-        public virtual List<Seans> Seans { get; set; }
+        //public virtual List<Seans> Seans { get; set; }
         public virtual Cinema Cinema { get; set; }
     }
 }

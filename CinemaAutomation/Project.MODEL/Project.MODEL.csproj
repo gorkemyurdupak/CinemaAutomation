@@ -52,10 +52,10 @@
     <Compile Include="Entities\Movie.cs" />
     <Compile Include="Entities\Sales.cs" />
     <Compile Include="Entities\Salon.cs" />
+    <Compile Include="Entities\SalonSeans.cs" />
     <Compile Include="Entities\Seans.cs" />
     <Compile Include="Entities\Seat.cs" />
     <Compile Include="Entities\Ticket.cs" />
-    <Compile Include="Entities\VIPMember.cs" />
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\Role.cs" />
     <Compile Include="Enums\SexStatus.cs" />

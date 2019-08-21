@@ -19,6 +19,7 @@ namespace Project.MODEL.Entities
         public bool SmsMessage { get; set; }   //Kayıt ekranında kullanılacak. 
         public bool EmailMessage { get; set; }
         public string UserComment { get; set; }
+        public string Email { get; set; }
         public AppUser()
         {
             UserRole = Role.Member;
