@@ -28,9 +28,8 @@ namespace Project.MODEL.Entities
         }
 
         //Relational Properties
-
         public virtual AppUserProfile AppUserProfile { get; set; }
-        public virtual Ticket Ticket { get; set; } //burada olmalı mı ? ../ satış yaparken tek bilet üzerinde birden fazla koltuk seçimi ve bir film seçimi yapılmış olabilir.İnternetten satışı düşünürsek olmalı.
+ 
 
     }
 }

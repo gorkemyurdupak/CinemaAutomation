@@ -26,8 +26,7 @@ namespace Project.MODEL.Entities
         public virtual List<Ticket> Tickets { get; set; }
         public virtual List<Salon> Salons { get; set; }
         public virtual Genre MovieGenre { get; set; }
-        public virtual Cinema Cinema { get; set; } //hangi sinemada oynayacağı , örn : akasya avm.
-
+        public virtual List<MovieSeans> MovieSeanss { get; set; }
 
     }
 }

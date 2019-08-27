@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.MODEL.Entities
+namespace Project.MODEL.Enums
 {
-   public class Sales:BaseEntity
+    public enum TicketSalesType
     {
-        public decimal MoviePrice { get; set; }
+        Internet=1, BoxOffice=2
     }
 }
