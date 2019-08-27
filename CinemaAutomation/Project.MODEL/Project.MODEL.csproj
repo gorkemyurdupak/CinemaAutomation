@@ -46,7 +46,7 @@
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Cinema.cs" />
     <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Discount.cs" />
+    <Compile Include="Entities\SpecialDay.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="Entities\Movie.cs" />
@@ -59,6 +59,7 @@
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\Role.cs" />
     <Compile Include="Enums\SexStatus.cs" />
+    <Compile Include="Enums\TicketGenre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

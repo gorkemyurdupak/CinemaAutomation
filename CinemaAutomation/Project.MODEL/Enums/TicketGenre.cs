@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.MODEL.Entities
+namespace Project.MODEL.Enums
 {
-   public class Discount: BaseEntity
+    public enum TicketGenre
     {
-
+        Normal=1, VIP=2, VIPg=3, Student=4
     }
 }
