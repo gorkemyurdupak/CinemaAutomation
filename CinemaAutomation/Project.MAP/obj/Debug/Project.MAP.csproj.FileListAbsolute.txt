@@ -19,3 +19,18 @@ C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\P
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csproj.CopyComplete
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.dll
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MAP.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MAP.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MAP.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MODEL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MODEL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\Project.MODEL.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csprojAssemblyReference.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csproj.CopyComplete
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\CinemaOtomasyon\CinemaAutomation\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.pdb

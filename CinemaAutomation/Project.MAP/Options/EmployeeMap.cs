@@ -11,6 +11,7 @@ namespace Project.MAP.Options
     {
         public EmployeeMap()
         {
+            Ignore(x => x.ID);
             Property(x => x.EmpFirstName).HasMaxLength(20).IsRequired();
             Property(x => x.EmpLastName).HasMaxLength(20).IsRequired();
             Property(x => x.Address).HasMaxLength(300).IsOptional();

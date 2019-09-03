@@ -11,6 +11,7 @@ namespace Project.MAP.Options
     {
         public GenreMap()
         {
+            Ignore(x => x.ID);
             Property(x => x.GenreName).HasMaxLength(20).IsRequired();
             
         }

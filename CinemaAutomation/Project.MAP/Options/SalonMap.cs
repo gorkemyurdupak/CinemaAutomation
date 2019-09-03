@@ -11,7 +11,8 @@ namespace Project.MAP.Options
     {
         public SalonMap()
         {
-        //Data Annotation yöntemi ile class içerisinde ayarlamaları yapılmıştır.Map'te herhangi bir şey yapmaya gerek kalmadı.
+            //Data Annotation yöntemi ile class içerisinde ayarlamaları yapılmıştır.Map'te herhangi bir şey yapmaya gerek kalmadı.
+            Ignore(x => x.ID);
 
         }
     }

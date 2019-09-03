@@ -11,6 +11,8 @@ namespace Project.MAP.Options
     {
         public TicketMap()
         {
+            
+            Ignore(x => x.ID);
             //ticket iyice kontrol edilsin ona göre düzenlensin burası.
         }
     }

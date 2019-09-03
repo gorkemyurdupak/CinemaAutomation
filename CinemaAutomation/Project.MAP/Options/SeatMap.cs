@@ -11,6 +11,7 @@ namespace Project.MAP.Options
     {
         public SeatMap()
         {
+            Ignore(x => x.ID);
             //Bazı katmanların kısıtlamalarını DataAnnotaion yöntemini kullanarak bitirdik.
         }
     }

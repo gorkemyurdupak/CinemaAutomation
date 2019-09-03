@@ -11,6 +11,7 @@ namespace Project.MAP.Options
     {
         public MovieMap()
         {
+            Ignore(x => x.ID);
             Property(x => x.MovieName).HasMaxLength(50).IsRequired();
             Property(x => x.Director).IsRequired();
             Property(x => x.MovieSummary).HasMaxLength(1000);
