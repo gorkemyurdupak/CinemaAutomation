@@ -4,3 +4,24 @@ F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CoreCompileInputs.cache
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.dll
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.pdb
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.DAL.dll.config
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.DAL.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.DAL.pdb
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Bogus.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MAP.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MODEL.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MAP.pdb
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MAP.dll.config
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MODEL.pdb
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Project.MODEL.dll.config
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Bogus.pdb
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\Bogus.xml
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.xml
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csprojAssemblyReference.cache
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CoreCompileInputs.cache
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CopyComplete
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.dll
+C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.pdb

@@ -51,6 +51,16 @@
     <Compile Include="Options\AppUserMap.cs" />
     <Compile Include="Options\AppUserProfileMap.cs" />
     <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\EmployeeMap.cs" />
+    <Compile Include="Options\GenreMap.cs" />
+    <Compile Include="Options\MovieMap.cs" />
+    <Compile Include="Options\MovieSeansMap.cs" />
+    <Compile Include="Options\SalonMap.cs" />
+    <Compile Include="Options\SalonSeansMap.cs" />
+    <Compile Include="Options\SeansMap.cs" />
+    <Compile Include="Options\SeatMap.cs" />
+    <Compile Include="Options\SpecialDayMap.cs" />
+    <Compile Include="Options\TicketMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

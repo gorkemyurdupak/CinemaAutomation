@@ -14,8 +14,8 @@ namespace Project.MODEL.Entities
         public string EmpLastName { get; set; }
         public DateTime? BirthDate { get; set; }
         public DateTime? HireDate { get; set; }
-        public string Title { get; set; }
-        public string TitleOfCourtesy { get; set; }
+        public string Title { get; set; }  //buradan alttaki sınıra kadar boş geçilecek. ((adress dahil)
+        public string TitleOfCourtesy { get; set; } 
         public string Extensions { get; set; }
         public string Photo { get; set; } //todo MAP katmanında null geçilebilir olması sağlanacak.
         public string PhotoPath { get; set; } //todo MAP katmanında null geçilebilir olması sağlanacak.
