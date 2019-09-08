@@ -50,12 +50,22 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryPattern\BaseRepository\BaseRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\AppUserProfileRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\AppUserRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\EmployeeRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\GenreRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\MovieRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\MovieSeansRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\SalonRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\SalonSeansRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\SeansRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\SeatRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\SpecialDayRepository.cs" />
+    <Compile Include="RepositoryPattern\ConcreteRepository\TicketRepository.cs" />
     <Compile Include="RepositoryPattern\InterfaceRepository\IRepository.cs" />
     <Compile Include="SingletonPattern\DBTool.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RepositoryPattern\ConcreteRepository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Project.DAL\Project.DAL.csproj">
       <Project>{C72E9ED7-1899-4EDF-8AE0-E816E7BDA268}</Project>

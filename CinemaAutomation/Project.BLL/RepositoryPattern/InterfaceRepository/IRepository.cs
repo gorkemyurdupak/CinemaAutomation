@@ -23,5 +23,7 @@ namespace Project.BLL.RepositoryPattern.InterfaceRepository
         List<T> SelectDeleteds();
         List<T> SelectModifieds();
         void SpecialDelete(int id);
+
+        
     }
 }
