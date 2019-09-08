@@ -13,10 +13,10 @@ namespace Project.MODEL.Entities
         public string MovieName { get; set; }
 
         [Required]
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
-        public DateTime ScreenTime { get; set; }
+        //[DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
+        public int ScreenTime { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")] //otomatik saat belirliyor.Düzeltilmeli.
         public DateTime? ShowDate { get; set; }
         public string ImagePath { get; set; }
         public string Director { get; set; }

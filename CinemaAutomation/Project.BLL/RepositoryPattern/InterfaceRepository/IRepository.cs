@@ -23,7 +23,6 @@ namespace Project.BLL.RepositoryPattern.InterfaceRepository
         List<T> SelectDeleteds();
         List<T> SelectModifieds();
         void SpecialDelete(int id);
-
-        
+        object Select(Expression<Func<T, object>> exp); //yeni eklenen 
     }
 }
