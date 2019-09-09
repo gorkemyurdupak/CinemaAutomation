@@ -14,9 +14,10 @@ namespace Project.MODEL.Entities
 
         [Required]
         //[DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
+        [Range(0,225)]
         public int ScreenTime { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")] //otomatik saat belirliyor.Düzeltilmeli.
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")] //otomatik saat belirliyor.Çağırıldığı yerde ToString vs tarzı bir metot ile kullanılabilme şansı var.Veritabanından olmuyor gibi gözüküyor.
         public DateTime? ShowDate { get; set; }
         public string ImagePath { get; set; }
         public string Director { get; set; }
