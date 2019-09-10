@@ -10,7 +10,7 @@ namespace Project.MODEL.Entities
     {
         public int GenreID { get; set; }
         public string GenreName { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; } //Neden burada //todo 
 
         //Relational Properties
 

@@ -12,7 +12,7 @@ namespace Project.MAP.Options
     {
         public BaseMap()
         {
-            
+          //gerekli bir değiştirme olmadığı için boş bırakıldı.
         }
     }
 }

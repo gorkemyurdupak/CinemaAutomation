@@ -10,10 +10,10 @@ namespace Project.MODEL.Entities
     public class Ticket: BaseEntity
     {
         public int TicketID { get; set; }
-        public TicketSalesType TicketSalesType { get; set; }
+        public TicketSalesType TicketSalesType { get; set; } //internetten mi yoksa gişeden mi olduğunu belirtiyor.
         public decimal TicketPrice { get; set; }
         public short TicketCount { get; set; }
-        public TicketGenre TicketGenre { get; set; }
+        public TicketGenre TicketGenre { get; set; } //öğrenci,vip vs bileti.
         public decimal Discount
         {
             get
@@ -42,8 +42,8 @@ namespace Project.MODEL.Entities
         //Relational Properties
         public virtual Movie Movie { get; set; }
         public virtual Salon Salon { get; set; }
-        public virtual Seans Seans { get; set; }
         public virtual Employee Employee { get; set; } //bileti kesen kasiyerin ismi fişte yazacak.
         public virtual AppUserProfile AppUserProfile { get; set; }
+        public virtual List<Seat> Seats { get; set; }
     }
 }

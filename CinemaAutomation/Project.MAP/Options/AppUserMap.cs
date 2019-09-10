@@ -14,6 +14,8 @@ namespace Project.MAP.Options
             HasOptional(x => x.AppUserProfile).WithRequired(x => x.AppUser);
 
             Ignore(x => x.ConfirmPassword);
+
+            Property(x => x.UserComment).HasMaxLength(350).IsOptional();
         }
     }
 }
