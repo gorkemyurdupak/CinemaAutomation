@@ -28,3 +28,27 @@ C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.BLL\obj\Debug\P
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csproj.CopyComplete
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.dll
 C:\Users\gorke\Desktop\CinemaAutomation\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.BLL.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.BLL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.BLL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.DAL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MODEL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Bogus.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MAP.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.DAL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.DAL.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MODEL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MODEL.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Bogus.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Bogus.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MAP.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\bin\Debug\Project.MAP.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csprojAssemblyReference.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csproj.CopyComplete
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.pdb

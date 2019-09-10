@@ -9,8 +9,8 @@ Website: http://thevectorlab.net/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
 body {
-    color: #797979;
-    background: #f1f2f7;
+    color: #2a3542;
+    background: #2a3542;
     font-family: 'Open Sans', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -43,7 +43,15 @@ a, a:hover, a:focus {
 /*login page*/
 
 .login-body {
-    background-color: #f1f2f7;
+    background-color: #131a20;
+    background-image: url("/OuterTools/movie_review/images/51080p.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -o-background-size: 100% 100%;
+    top:0;
+    left:0;
 }
 
 .form-signin {

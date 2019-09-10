@@ -1636,6 +1636,7 @@
     <Content Include="OuterTools\movie_review\dummy\thumb-8.jpg" />
     <Content Include="OuterTools\movie_review\fonts\font-awesome.min.css" />
     <Content Include="OuterTools\movie_review\fonts\fontawesome-webfont.svg" />
+    <Content Include="OuterTools\movie_review\images\51080p.png" />
     <Content Include="OuterTools\movie_review\images\arrow%402x.png" />
     <Content Include="OuterTools\movie_review\images\arrow-gray%402x.png" />
     <Content Include="OuterTools\movie_review\images\arrow-gray.png" />
@@ -2017,6 +2018,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2038,6 +2040,14 @@
     <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
       <Project>{875d28c2-9c99-4160-b2a4-cc1fa33a5427}</Project>
       <Name>Project.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.COMMON\Project.COMMON.csproj">
+      <Project>{1745DB33-B8B4-418D-BE72-E3E146996C40}</Project>
+      <Name>Project.COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.MODEL\Project.MODEL.csproj">
+      <Project>{AC65AFA7-07C5-4795-9E80-6775B873B077}</Project>
+      <Name>Project.MODEL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
