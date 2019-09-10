@@ -316,3 +316,5 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAut
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.csproj.CopyComplete
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Project.COMMON.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Project.COMMON.pdb

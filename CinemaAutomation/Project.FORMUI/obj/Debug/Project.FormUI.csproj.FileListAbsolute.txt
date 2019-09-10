@@ -7,3 +7,12 @@ F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csproj.CoreCompileInputs.cache
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.exe
 F:\Ne alırsan 1 lira\Visual Studio Projeler\Projeler\GorkProje\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.exe.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.exe
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\bin\Debug\Project.FormUI.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csprojAssemblyReference.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.Properties.Resources.resources
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csproj.GenerateResource.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.exe
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.pdb
