@@ -1598,8 +1598,11 @@
     <Content Include="OuterTools\movie_review\css\style.css" />
     <Content Include="OuterTools\movie_review\css\table-responsive.css" />
     <Content Include="OuterTools\movie_review\css\tasks.css" />
+    <Content Include="OuterTools\movie_review\dummy\aysen.png" />
     <Content Include="OuterTools\movie_review\dummy\background%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\background.jpg" />
+    <Content Include="OuterTools\movie_review\dummy\devrim.png" />
+    <Content Include="OuterTools\movie_review\dummy\elonburak.png" />
     <Content Include="OuterTools\movie_review\dummy\figure%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\figure.jpg" />
     <Content Include="OuterTools\movie_review\dummy\person-1%402x.jpg" />
@@ -1610,6 +1613,7 @@
     <Content Include="OuterTools\movie_review\dummy\person-3.jpg" />
     <Content Include="OuterTools\movie_review\dummy\person-4%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\person-4.jpg" />
+    <Content Include="OuterTools\movie_review\dummy\sevimo.png" />
     <Content Include="OuterTools\movie_review\dummy\single-image%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\single-image.jpg" />
     <Content Include="OuterTools\movie_review\dummy\slide-1%402x.jpg" />
@@ -1618,6 +1622,7 @@
     <Content Include="OuterTools\movie_review\dummy\slide-2.jpg" />
     <Content Include="OuterTools\movie_review\dummy\slide-3%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\slide-3.jpg" />
+    <Content Include="OuterTools\movie_review\dummy\steveburak.png" />
     <Content Include="OuterTools\movie_review\dummy\thumb-1%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\thumb-1.jpg" />
     <Content Include="OuterTools\movie_review\dummy\thumb-2%402x.jpg" />
@@ -1634,6 +1639,7 @@
     <Content Include="OuterTools\movie_review\dummy\thumb-7.jpg" />
     <Content Include="OuterTools\movie_review\dummy\thumb-8%402x.jpg" />
     <Content Include="OuterTools\movie_review\dummy\thumb-8.jpg" />
+    <Content Include="OuterTools\movie_review\dummy\zuckergörkem.png" />
     <Content Include="OuterTools\movie_review\fonts\font-awesome.min.css" />
     <Content Include="OuterTools\movie_review\fonts\fontawesome-webfont.svg" />
     <Content Include="OuterTools\movie_review\images\51080p.png" />
@@ -1641,6 +1647,7 @@
     <Content Include="OuterTools\movie_review\images\arrow-gray%402x.png" />
     <Content Include="OuterTools\movie_review\images\arrow-gray.png" />
     <Content Include="OuterTools\movie_review\images\arrow.png" />
+    <Content Include="OuterTools\movie_review\images\hakkımızdafoto.png" />
     <Content Include="OuterTools\movie_review\images\icon-contact-envelope%402x.png" />
     <Content Include="OuterTools\movie_review\images\icon-contact-envelope.png" />
     <Content Include="OuterTools\movie_review\images\icon-contact-globe%402x.png" />
@@ -1658,6 +1665,7 @@
     <Content Include="OuterTools\movie_review\images\loginp.png" />
     <Content Include="OuterTools\movie_review\images\logo%402x.png" />
     <Content Include="OuterTools\movie_review\images\logo.png" />
+    <Content Include="OuterTools\movie_review\images\logo_2x_Vmv_icon.ico" />
     <Content Include="OuterTools\movie_review\images\select%402x.png" />
     <Content Include="OuterTools\movie_review\images\select.png" />
     <Content Include="OuterTools\movie_review\index.html" />
@@ -1951,6 +1959,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2021,6 +2031,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
+    <Content Include="Views\Member\About.cshtml" />
+    <Content Include="Views\Home\RegisterOk.cshtml" />
+    <Content Include="Views\Member\Movies.cshtml" />
+    <Content Include="Views\Member\ContactUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2033,7 +2047,6 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="AuthenticationClasses\" />
     <Folder Include="Models\MyTools\" />
     <Folder Include="OuterTools\movie_review\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="OuterTools\movie_review\sass\pages\" />

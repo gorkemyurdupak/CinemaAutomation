@@ -47,7 +47,8 @@
     <Compile Include="Tools\MailSender.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pictures\" />
+    <Folder Include="Pictures\FormPictures\" />
+    <Folder Include="Pictures\MoviePictures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

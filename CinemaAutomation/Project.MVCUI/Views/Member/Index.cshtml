@@ -8,12 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-
-    <title>Movie Review</title>
+    <link rel="icon" href="~/OuterTools/movie_review/images/logo@2x.png">
+    <title>CineFlex</title>
 
     <link href="~/OuterTools/movie_review/css/bootstrap.min.css" rel="stylesheet" />
-
-
     <!-- Loading third party fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
     <link href="~/OuterTools/movie_review/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -67,14 +65,14 @@
                 <div class="main-navigation">
                     <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item current-menu-item"><a href="index.html">Ana Sayfa</a></li>
-                        <li class="menu-item"><a href="about.html">Hakkımızda</a></li>
-                        <li class="menu-item"><a href="review.html">Filmler</a></li>
-                        <li class="menu-item"><a href="contact.html">İletişim</a></li>
+                        <li class="menu-item current-menu-item"><a href="">Ana Sayfa</a></li>
+                        <li class="menu-item">@Html.ActionLink("Hakkımızda","About")</a></li>
+                        <li class="menu-item">@Html.ActionLink("Filmler", "Movies")</li>
+                        <li class="menu-item">@Html.ActionLink("İletişim","ContactUs")</li>
                     </ul> <!-- .menu -->
 
                     <form action="#" class="search-form">
-                        <input type="text" placeholder="Search...">
+                        <input type="text" placeholder="Ara...">
                         <button><i class="fa fa-search"></i></button>
                     </form>
                 </div>    <!--.main-navigation-->
@@ -278,7 +276,7 @@
                     </div>
                 </div> <!-- .row -->
 
-                <div class="colophon">CineFlex 2008, tüm hakları saklıdır.</div>
+                <div class="colophon">CineFlex 2003, tüm hakları saklıdır.</div>
             </div> <!-- .container -->
 
         </footer>

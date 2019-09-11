@@ -10,7 +10,6 @@ namespace Project.MODEL.Entities
     {
         public DateTime Day { get; set; } //kontrol edilsin neden boş geçilemediği.
         public string DayName { get; set; }
-        public bool IsSpecialDay { get; set; }
 
     }
 }

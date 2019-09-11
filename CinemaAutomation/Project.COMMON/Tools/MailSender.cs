@@ -7,17 +7,17 @@ using System.Web;
 
 namespace Project.COMMON.Tools
 {
-    public static class MailSender
+    public class MailSender
     {
       
-        public static void Send(string receiver,string password="Sinemaotomasyonu",string body="Deneme",string subject="Test",string sender="cineflex@hotmail.com")
+        public static void Send(string receiver="tano7399@hotmail.com",string password="Sinemaotomasyonu",string body="Deneme",string subject="Test",string sender="cineflex@hotmail.com")
         {
 
             MailAddress senderEmail = new MailAddress(sender);
 
             MailAddress receiverEmail = new MailAddress(receiver);//burada item.Email kullanılacak.
 
-
+          
             SmtpClient smtp = new SmtpClient
             {
                 Host = "smtp-mail.outlook.com",
@@ -25,8 +25,8 @@ namespace Project.COMMON.Tools
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(senderEmail.Address, password)            
-            };          
+                Credentials = new NetworkCredential(senderEmail.Address, password)     
+        };          
 
             using (var mesaj = new MailMessage(senderEmail, receiverEmail)
             {
@@ -37,6 +37,7 @@ namespace Project.COMMON.Tools
             {
                 //using scope'u
                 smtp.Send(mesaj); //Mail gönderildi.
+               
             }
         }
        
