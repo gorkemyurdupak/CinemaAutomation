@@ -1,0 +1,295 @@
+﻿@model Movie
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Movie Review</title>
+
+    <link href="~/OuterTools/movie_review/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Loading third party fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="~/OuterTools/movie_review/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="~/OuterTools/movie_review/style.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="js/ie-support/html5.js"></script>
+    <script src="js/ie-support/respond.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="site-content">
+        <header class="site-header">
+            <div class="container">
+                <a href="" id="branding">
+                    <img src="~/OuterTools/movie_review/images/logo.png" alt="" class="logo">
+                    <div class="logo-copy">
+                        <h1 class="site-title">CineFlex</h1>
+                        <small class="site-description">Keyifli Seyirler</small>
+                    </div>
+                </a> <!-- #branding -->
+
+
+                <div class="top-nav">
+                    <!--search & user info start-->
+                    <ul class="nav pull-right top-menu">
+                        <!-- user login dropdown start-->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                Bize Katılın
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <div class="log-arrow-up"></div>
+                                <li>@Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)<img src="~/OuterTools/movie_review/images/icon-contact-user.png" /></a></li>
+                                <li><img src="~/OuterTools/movie_review/images/loginp.png"/>  @Html.ActionLink("Giriş Yap","Login","Home",new { id = "" },null) </li>
+                            </ul>
+                        </li>
+                        <!-- user login dropdown end -->
+                    </ul>
+                    <!--search & user info end-->
+                </div>
+
+
+                <div class="main-navigation">
+                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item current-menu-item"><a href="index.html">Ana Sayfa</a></li>
+                        <li class="menu-item"><a href="about.html">Hakkımızda</a></li>
+                        <li class="menu-item"><a href="review.html">Filmler</a></li>
+                        <li class="menu-item"><a href="contact.html">İletişim</a></li>
+                    </ul> <!-- .menu -->
+
+                    <form action="#" class="search-form">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>    <!--.main-navigation-->
+                <div class="mobile-navigation"></div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <div class="page">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li class style="width: 100%; margin-right: -100%; display: block; position: relative;      z-index: 1; opacity: 0; float: left;">
+                                        <a href="#"><img draggable="false" alt="Slide 1" src="~/OuterTools/movie_review/dummy/slide-1.jpg"></a>
+                                    </li>
+                                    <li class style="width: 100%; margin-right: -100%; display: block; position: relative; z-index: 1; opacity: 0; float: left;"><a href="#"><img draggable="false" alt="Slide 2" src="~/OuterTools/movie_review/dummy/slide-2.jpg"></a></li>
+                                    <li class="flex-active-slide" style="width: 100%; margin-right: -100%; display: block; position: relative; z-index: 2; opacity: 1; float: left;">
+                                        <a href="#"><img draggable="false" alt="Slide 3" src="~/OuterTools/movie_review/dummy/slide-3.jpg"></a>
+                                    </li> <!--bunları öğeyi denetleden getirince düzeldi ancak geçiş yapmıyor.Burası kaynak kısmına girince çıkmıyor.Runtime esnasında flex-active-slide değişiyor.-->
+                                </ul>
+                                <ul class="flex-direction-nav">
+                                    <li>
+                                        <a class="flex-prev" href="#"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="flex-next" href="#"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-12">
+                                    <div class="latest-movie">
+                                        <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-1.jpg" alt="Movie 1"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-12">
+                                    <div class="latest-movie">
+                                        <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-2.jpg" alt="Movie 2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-3.jpg" alt="Movie 3"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-4.jpg" alt="Movie 4"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-5.jpg" alt="Movie 5"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="#"><img src="~/OuterTools/movie_review/dummy/thumb-6.jpg" alt="Movie 6"></a>
+                            </div>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2 class="section-title">December premiere</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <ul class="movie-schedule">
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                            </ul> <!-- .movie-schedule -->
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="section-title">November premiere</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <ul class="movie-schedule">
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                            </ul> <!-- .movie-schedule -->
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="section-title">October premiere</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <ul class="movie-schedule">
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                                <li>
+                                    <div class="date">16/12</div>
+                                    <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+                                </li>
+                            </ul> <!-- .movie-schedule -->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">About Us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Recent Review</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Sit amet consecture</a></li>
+                                <li><a href="#">Dolorem respequem</a></li>
+                                <li><a href="#">Invenore veritae</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Help Center</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Sit amet consecture</a></li>
+                                <li><a href="#">Dolorem respequem</a></li>
+                                <li><a href="#">Invenore veritae</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Join Us</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Sit amet consecture</a></li>
+                                <li><a href="#">Dolorem respequem</a></li>
+                                <li><a href="#">Invenore veritae</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Social Media</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Google+</a></li>
+                                <li><a href="#">Pinterest</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Newsletter</h3>
+                            <form action="#" class="subscribe-form">
+                                <input type="text" placeholder="Email Address">
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- .row -->
+
+                <div class="colophon">CineFlex 2008, tüm hakları saklıdır.</div>
+            </div> <!-- .container -->
+
+        </footer>
+    </div>
+
+    <!-- Default snippet for navigation -->
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="~/OuterTools/movie_review/js/jquery.js"></script>
+    <script src="~/OuterTools/movie_review/js/bootstrap.min.js"></script>
+    <script src="~/OuterTools/movie_review/js/jquery-1.8.3.min.js"></script>
+    @*<script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>*@
+</body>
+</html>
