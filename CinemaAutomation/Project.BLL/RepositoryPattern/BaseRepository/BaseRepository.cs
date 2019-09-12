@@ -21,7 +21,7 @@ namespace Project.BLL.RepositoryPattern.BaseRepository
         {
             db = DBTool.DBInstance;
         }
-        private void Save()
+        public void Save()
         {
             db.SaveChanges();
         }

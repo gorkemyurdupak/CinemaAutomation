@@ -22,7 +22,7 @@ namespace Project.MODEL.Entities
         public bool EmailMessage { get; set; }
         public string UserComment { get; set; }
         public string Email { get; set; }
-        public DateTime ConfirmedDate { get; set; }
+        public DateTime? ConfirmedDate { get; set; }
         public Progress MembershipProgress { get; set; }
         public AppUser()
         {
