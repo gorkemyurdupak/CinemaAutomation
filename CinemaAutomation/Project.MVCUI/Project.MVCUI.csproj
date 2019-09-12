@@ -1673,6 +1673,7 @@
     <Content Include="OuterTools\movie_review\js\additional-methods.min.js" />
     <Content Include="OuterTools\movie_review\js\advanced-form-components.js" />
     <Content Include="OuterTools\movie_review\js\all-chartjs.js" />
+    <Content Include="OuterTools\movie_review\js\app.js" />
     <Content Include="OuterTools\movie_review\js\bootstrap-switch.js" />
     <Content Include="OuterTools\movie_review\js\bootstrap.js" />
     <Content Include="OuterTools\movie_review\js\bootstrap.min.js" />
@@ -1692,6 +1693,7 @@
     <Content Include="OuterTools\movie_review\js\gritter.js" />
     <Content Include="OuterTools\movie_review\js\hover-dropdown.js" />
     <Content Include="OuterTools\movie_review\js\html5shiv.js" />
+    <Content Include="OuterTools\movie_review\js\jquery-1.11.1.min.js" />
     <Content Include="OuterTools\movie_review\js\jquery-1.8.3.min.js" />
     <Content Include="OuterTools\movie_review\js\jquery-ui-1.9.2.custom.min.js" />
     <Content Include="OuterTools\movie_review\js\jquery.cookie.js" />
@@ -1711,6 +1713,7 @@
     <Content Include="OuterTools\movie_review\js\morris-script.js" />
     <Content Include="OuterTools\movie_review\js\nestable.js" />
     <Content Include="OuterTools\movie_review\js\owl.carousel.js" />
+    <Content Include="OuterTools\movie_review\js\plugins.js" />
     <Content Include="OuterTools\movie_review\js\respond.min.js" />
     <Content Include="OuterTools\movie_review\js\respond.src.js" />
     <Content Include="OuterTools\movie_review\js\sliders.js" />
@@ -1718,6 +1721,13 @@
     <Content Include="OuterTools\movie_review\js\tasks.js" />
     <Content Include="OuterTools\movie_review\js\toucheffects.js" />
     <Content Include="OuterTools\movie_review\review.html" />
+    <Content Include="Pictures\469656-fast-furious-hobbs-shaw-en-avant-premieres-au-grand-rex-de-paris.jpg" />
+    <Content Include="Pictures\angrybirds2.jpg" />
+    <Content Include="Pictures\duzenbazlar-kulubusingle.png" />
+    <Content Include="Pictures\duzenbazlarkulubu.png" />
+    <Content Include="Pictures\maxresdefault.jpg" />
+    <Content Include="Pictures\newyorkta.jpg" />
+    <Content Include="Pictures\sarbasa1280e720.jpg" />
     <Content Include="OuterTools\movie_review\single.html" />
     <Content Include="OuterTools\movie_review\style.css" />
     <Content Include="OuterTools\movie_review\__MACOSX\._about.html" />
@@ -1795,6 +1805,11 @@
     <Content Include="OuterTools\movie_review\__MACOSX\js\ie-support\._respond.js" />
     <Content Include="OuterTools\movie_review\__MACOSX\js\min\._app-min.js" />
     <Content Include="OuterTools\movie_review\__MACOSX\js\min\._plugins-min.js" />
+    <Content Include="Pictures\HO00003910_637019138600652257_masal-satosu-sihirli-davet.png" />
+    <Content Include="Pictures\HO00003911_637019138600652257_abigail-sinirlarin-otesinde.png" />
+    <Content Include="Pictures\HO00003925_637025905754306816_45-25-kusursuzcinayet.png" />
+    <Content Include="Pictures\HO00003926_637025905754306816_duzenbazlar-kulubu.png" />
+    <Content Include="Pictures\kod-adı-angel-770x433.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="OuterTools\movie_review\assets\advanced-datatable\component.json" />
@@ -2035,6 +2050,7 @@
     <Content Include="Views\Home\RegisterOk.cshtml" />
     <Content Include="Views\Member\Movies.cshtml" />
     <Content Include="Views\Member\ContactUs.cshtml" />
+    <Content Include="Views\Member\SingleMovie.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,16 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="icon" href="~/OuterTools/movie_review/images/logo@2x.png">
-    <title>CineFlex | İletişim</title>
+    <title>CineFlex | FilmAdı</title>
 
     <!-- Loading third party fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
     <link href="~/OuterTools/movie_review/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="~/OuterTools/movie_review/images/logo.png">
+
     <!-- Loading main css file -->
     <link rel="stylesheet" href="~/OuterTools/movie_review/style.css">
 
@@ -22,18 +22,17 @@
 </head>
 
 <body>
-
     <div id="site-content">
         <header class="site-header">
             <div class="container">
                 <a href="~/Member/Index" id="branding">
                     <img src="~/OuterTools/movie_review/images/logo.png" alt="" class="logo">
                     <div class="logo-copy">
-                        <h1 class="site-title">CıneFlex</h1>
+                        <h1 class="site-title">CineFlex</h1>
                         <small class="site-description">Keyifli Seyirler</small>
                     </div>
                 </a> <!-- #branding -->
-                
+
                 <div class="top-nav">
                     <!--search & user info start-->
                     <ul class="nav pull-right top-menu">
@@ -59,58 +58,59 @@
                     <ul class="menu">
                         <li class="menu-item">@Html.ActionLink("Ana Sayfa", "Index")</li>
                         <li class="menu-item">@Html.ActionLink("Hakkımızda", "About")</li>
-                        <li class="menu-item">@Html.ActionLink("Filmler","Movies")</li>
-                        <li class="menu-item current-menu-item"><a href="">İletişim</a></li>
+                        <li class="menu-item current-menu-item">@Html.ActionLink("Filmler", "Movies")</li>
+                        <li class="menu-item">@Html.ActionLink("İletişim", "ContactUs")</li>
                     </ul> <!-- .menu -->
 
                     <form action="#" class="search-form">
                         <input type="text" placeholder="Ara...">
                         <button><i class="fa fa-search"></i></button>
                     </form>
+
                 </div> <!-- .main-navigation -->
 
                 <div class="mobile-navigation"></div>
             </div>
         </header>
-
         <main class="main-content">
             <div class="container">
                 <div class="page">
                     <div class="breadcrumbs">
                         @Html.ActionLink("Ana Sayfa", "Index")
-                        <span>İletişim</span>
+                        @Html.ActionLink("Filmler", "Movies")
+                        <span>Düzenbazlar Kulübü</span>
                     </div>
 
                     <div class="content">
                         <div class="row">
-                            <div class="col-md-4">
-                                <h2>İletişim</h2>
-                                <ul class="contact-detail">
-                                    <li>
-                                        <img src="~/OuterTools/movie_review/images/icon-contact-map.png" alt="#">
-                                        <address><span>CineFlex Group Cinema</span> <br>Mühürdar Cd. Kadıköy</address>
-                                    </li>
-                                    <li>
-                                        <img src="~/OuterTools/movie_review/images/icon-contact-phone.png" alt="">
-                                        <a href="tel:21624633539">0(216) 246 33 539</a>
-                                    </li>
-                                    <li>
-                                        <img src="~/OuterTools/movie_review/images/icon-contact-message.png" alt="">
-                                        <a href="mailto:contact@companyname.com">cineflex@hotmail.com</a>
-                                    </li>
-                                </ul>
-                                <div class="contact-form">
-                                    <input type="text" class="name" placeholder="İsim...">
-                                    <input type="text" class="email" placeholder="E-Mail...">
-                                    <input type="text" class="website" placeholder="Telefon...">
-                                    <textarea class="message" placeholder="Mesajınız..."></textarea>
-                                    <input type="submit" value="Mesajı Gönder ">
+                            <div class="col-md-6">
+                                <figure class="movie-poster"><img src="~/Pictures/duzenbazlar-kulubusingle.png" alt="#"></figure>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="movie-title">Düzenbazlar Kulübü</h2>
+                                <div class="movie-summary">
+                                    <p>Borsada çalışan Joe Hunt ve eski okul arkadaşı Dean Karny, şehrin en varlıklı yatırımcılarından Ron Levin’in çılgın fikirleriyle BBC adlı bir saadet zinciri kurarlar. Ancak gerçekte kimin dolandırıldığı, kimin kime oyun oynadığı belli değildir. Şehrin jet sosyetesinden, devasa şirketlerden BBC’ye yatırım teklifleri yağmakta; insanlar emeklilik günleri, çocuklarının eğitimi için yaptıkları birikimleri bu esrarengiz zincire teslim etmektedir. Genç milyarderlerin dizginsiz hırsı ile şirketleri kısa sürede Los Angeles’ın yıldızı haline gelince, FBI’ın radarına girmeleri de çok sürmeyecektir. </p>
 
                                 </div>
+                                <ul class="movie-meta">
+                                    <li>
+                                        <strong>Rating:</strong>
+                                        <div class="star-rating" title="Rated 9.2 out of 10"><span style="width:80%"><strong class="rating">9.2</strong> out of 10</span></div>
+                                    </li>
+                                    <li><strong>Süre:</strong> 108 Dakika</li>
+                                    <li><strong>Vizyon Tarihi:</strong> 06.09.2019</li>
+                                    <li><strong>Kategori:</strong> Biyografi</li>
+                                </ul>
+
+                                <ul class="starring">
+                                    <li><strong>Yönetmen:</strong> James Cox</li>
+                                    <li><strong>Formatlar:</strong> 2D, Altyazılı</li>
+                                    <li><strong>Oyuncular:</strong>  Kevin Spacey, Taron Egerton, Ansel Elgort</li>
+                                </ul>
                             </div>
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="map"></div>
-                            </div>
+                        </div> <!-- .row -->
+                        <div class="entry-content">
+                            <p>Borsada çalışan Joe Hunt ve eski okul arkadaşı Dean Karny, şehrin en varlıklı yatırımcılarından Ron Levin’in çılgın fikirleriyle BBC adlı bir saadet zinciri kurarlar. Ancak gerçekte kimin dolandırıldığı, kimin kime oyun oynadığı belli değildir. Şehrin jet sosyetesinden, devasa şirketlerden BBC’ye yatırım teklifleri yağmakta; insanlar emeklilik günleri, çocuklarının eğitimi için yaptıkları birikimleri bu esrarengiz zincire teslim etmektedir. Genç milyarderlerin dizginsiz hırsı ile şirketleri kısa sürede Los Angeles’ın yıldızı haline gelince, FBI’ın radarına girmeleri de çok sürmeyecektir.</p>
                         </div>
                     </div>
                 </div>
@@ -164,10 +164,7 @@
     </div>
     <!-- Default snippet for navigation -->
 
-
-
     <script src="~/OuterTools/movie_review/js/jquery-1.11.1.min.js"></script>
-    <script src="https://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script src="~/OuterTools/movie_review/js/plugins.js"></script>
     <script src="~/OuterTools/movie_review/js/app.js"></script>
 

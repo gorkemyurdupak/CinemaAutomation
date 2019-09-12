@@ -42,7 +42,7 @@ namespace Project.MVCUI.Controllers
 
             string gonderilecekMail = "Tebrikler hesabınız oluşturuldu. Hesabınızı aktive etmek için https://localhost:44317/Home/Activation/" + item.ActivationCode + " linkine tıklayabilirsiniz.";  //MVCUI'a sağ tık,Properties den girdiğinde web kısmında url'i göreceksin. (Aktivasyon action'ı açılmak zorunda unutma!)
 
-            MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Hesap Aktivasyon!"); //Password ??
+            MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Hesap Aktivasyonu!"); //Password ??
 
             aprep.Add(item); // buradan sonra item'in id'si olusmus oluyor...O yüzden item2'nin id'sini verecek isek buradan sonra vermeliyiz.
 
@@ -121,7 +121,7 @@ namespace Project.MVCUI.Controllers
                 Session["member"] = girisYapan;
                 return RedirectToAction("Index", "Member");
             }
-            ViewBag.KullaniciBulunamadi = "Böyle bir kullanıcı yoktur";
+            ViewBag.KullaniciBulunamadi = "Kullanıcı adı veya şifreniz hatalı olabilir.Böyle bir kullanıcı bulunamadı.";
             return View();
         }
     }
