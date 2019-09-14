@@ -19,8 +19,9 @@ namespace Project.MODEL.Entities
         public Guid? ActivationCode { get; set; }
         public Role UserRole { get; set; }
         public bool SmsMessage { get; set; }   //Kayıt ekranında kullanılacak. 
-        public bool EmailMessage { get; set; }
         public string UserComment { get; set; }
+        public int EmailID { get; set; }
+        public string ResetPasswordCode { get; set; }
         public string Email { get; set; }
         public DateTime? ConfirmedDate { get; set; }
         public Progress MembershipProgress { get; set; }
