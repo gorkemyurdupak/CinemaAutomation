@@ -124,6 +124,10 @@ namespace Project.MVCUI.Controllers
             ViewBag.KullaniciBulunamadi = "Kullanıcı adı veya şifreniz hatalı olabilir.Böyle bir kullanıcı bulunamadı.";
             return View();
         }
+        public ActionResult GenderController()
+        {
+            return View();
+        }
     }
 
 }

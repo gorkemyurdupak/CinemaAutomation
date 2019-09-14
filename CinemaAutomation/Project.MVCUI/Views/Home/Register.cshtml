@@ -53,10 +53,25 @@
                 @Html.TextBoxFor(x => x.Item1.ConfirmPassword, new { @class = "form-control", placeholder = "Şifreyi Tekrar giriniz" })
 
                 @Html.TextBoxFor(x => x.Item1.Email, new { @class = "form-control", placeholder = "Email Adresi" })
-                @Html.TextBoxFor(x=> x.Item2.Phone,new {@class="form-control",placeholder ="Telefon No" })
-                @*@Html.RadioButtonFor(x=> x.Item2.Sex, new {@class="form-control",placeholder="Cinsiyet" })*@
-                @Html.CheckBoxFor(x=> x.Item1.SmsMessage)
-                
+                @Html.TextBoxFor(x => x.Item2.Phone, new { @class = "form-control", placeholder = "Telefon No" })
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        Cinsiyet
+                        @Html.EnumDropDownListFor(model => model.Item2.Sex)
+                        @Html.ValidationMessageFor(model => model.Item2.Sex, "", new { @class = "text-danger" })
+                    </div>
+                </div>  <br/> <br />
+
+                <div class="form-group">
+                   
+                    <div class="col-md-10">
+                        SMS Mesajı Almak İstiyorum
+                        @Html.CheckBoxFor(model => model.Item1.SmsMessage)
+                        @Html.ValidationMessageFor(model => model.Item1.SmsMessage)
+                    </div>
+                </div>
+
 
                 @Html.TextBoxFor(x => x.Item2.UserFirstName, new { @class = "form-control", placeholder = "İsim" })
 
