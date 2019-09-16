@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Project.DAL.Context;
+using Project.BLL.SingletonPattern;
 
 namespace Project.MVCUI.Controllers
 {
@@ -19,6 +21,7 @@ namespace Project.MVCUI.Controllers
         {
             aprep = new AppUserRepository();
             apdrep = new AppUserProfileRepository();
+            
         }
         // GET: Home
         public ActionResult Register()
@@ -126,6 +129,31 @@ namespace Project.MVCUI.Controllers
         }
         public ActionResult ForgotPassword()
         {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult ForgotPassword(AppUser item)
+        {
+            if (aprep.Any(x=> x.Email==item.Email))
+            {
+                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + item.ResetPasswordCode + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
+
+                MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama");
+            }
+            else
+            {
+                ViewBag.MailGecersiz = "Bu mail kayıtlı değildir";
+            }
+            return View();
+        }
+        public ActionResult ResetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ResetPassword(AppUser item)
+        {
+            
             return View();
         }
     }

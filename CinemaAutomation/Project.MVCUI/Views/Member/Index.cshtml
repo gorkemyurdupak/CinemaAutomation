@@ -49,6 +49,7 @@
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
                                 Bize Katılın
                                 <b class="caret"></b>
                             </a>
@@ -70,7 +71,7 @@
                 <div class="main-navigation">
                     <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item current-menu-item"><a href="">Ana Sayfa</a></li>
+                        <li class="menu-item current-menu-item">@Html.ActionLink("Ana Sayfa","Index")</li>
                         <li class="menu-item">@Html.ActionLink("Hakkımızda","About")</a></li>
                         <li class="menu-item">@Html.ActionLink("Filmler", "Movies")</li>
                         <li class="menu-item">@Html.ActionLink("İletişim","ContactUs")</li>

@@ -1,4 +1,6 @@
-﻿using Project.BLL.RepositoryPattern.ConcreteRepository;
+﻿using PagedList;
+using Project.BLL.RepositoryPattern.ConcreteRepository;
+using Project.MODEL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,12 @@ namespace Project.MVCUI.Controllers
     {
         MovieRepository movp;
         GenreRepository genrp;
+
+        public MemberController()
+        {
+            movp = new MovieRepository();
+            genrp = new GenreRepository();
+        }
         // GET: Member
         public ActionResult Index()
         {
@@ -20,9 +28,9 @@ namespace Project.MVCUI.Controllers
         {
             return View();
         }
-        public ActionResult Movies()
+        public ActionResult Movies(int? page)
         {
-            return View();
+            return View((Tuple.Create(movp.SelectActives(), genrp.SelectActives().ToPagedList(page ?? 1, 9))));
         }
         public ActionResult ContactUs()
         {

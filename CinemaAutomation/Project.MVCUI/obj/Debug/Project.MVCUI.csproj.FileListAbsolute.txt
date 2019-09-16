@@ -318,3 +318,9 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAut
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.pdb
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Project.COMMON.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Project.COMMON.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Newtonsoft.Json.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\PagedList.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\PagedList.Mvc.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\Newtonsoft.Json.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\PagedList.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MVCUI\bin\PagedList.Mvc.xml
