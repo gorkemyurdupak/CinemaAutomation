@@ -40,7 +40,7 @@
                 <label class="checkbox">
                     <input type="checkbox" value="remember-me"> Beni Hatırla
                     <span class="pull-right">
-                        <a href="/Home/ForgotPassword" data-toggle="modal" href="#myModal"> Şifremi Unuttum</a>
+                        <a href="/Home/ForgotPassword" data-toggle="modal"> Şifremi Unuttum</a>
                     </span>
                 </label>
                 <button class="btn btn-lg btn-login btn-block">Giriş Yap</button>
@@ -48,7 +48,7 @@
                     Hesabınız yok mu ?
                     @Html.ActionLink("Hesap Oluştur", "Register")
 
-                    <h1 style="color:red;width:330px;height;20px;font-size:25px;"> @ViewBag.KullaniciBulunamadi</h1>
+                    <h1 style="color:red;width:330px;height:20px;font-size:25px;"> @ViewBag.KullaniciBulunamadi</h1>
                 </div>
             </div>
             <!-- Modal -->

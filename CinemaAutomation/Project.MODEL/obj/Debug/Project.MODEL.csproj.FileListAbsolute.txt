@@ -19,3 +19,10 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAut
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.csproj.CoreCompileInputs.cache
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomasyon\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\bin\Debug\Project.MODEL.dll.config
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\bin\Debug\Project.MODEL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\bin\Debug\Project.MODEL.pdb
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.csprojAssemblyReference.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.dll
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MODEL\obj\Debug\Project.MODEL.pdb

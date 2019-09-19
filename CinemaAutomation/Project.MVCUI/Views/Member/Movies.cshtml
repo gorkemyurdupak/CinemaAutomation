@@ -1,6 +1,7 @@
 ﻿@using PagedList
 @using PagedList.Mvc
-@model Movie
+@model Tuple<List<Genre>, IPagedList<Movie>>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,59 +87,24 @@
 
                     <div class="filters">
                         <select name="#" id="#" placeholder="Kategori Seçin">
-                            <option value="#">Aksiyon</option>
-                            <option value="#">Drama</option>
-                            <option value="#">Fantastik</option>
-                            <option value="#">Korku</option>
-                            <option value="#">Macera</option>
-                        </select>
-                        <select name="#" id="#">
-                            <option value="#">2018</option>
-                            <option value="#">2019</option>
+                            @foreach (Genre item2 in Model.Item1)
+                            {
+                                <option value="#">@item2.GenreName</option>
+                            }
                         </select>
                     </div>
+
                     <div class="movie-list">
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/HO00003926_637025905754306816_duzenbazlar-kulubu.png" alt="#"></figure>
-                            <div class="movie-title"><a href="~/Member/SingleMovie">Düzenbazlar Kulübü</a></div>
-                            <p> Borsada çalışan Joe Hunt ve eski okul arkadaşı Dean Karny, şehrin en varlıklı yatırımcılarından Ron Levin’in çılgın fikirleriyle BBC adlı bir saadet zinciri kurarlar.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/469656-fast-furious-hobbs-shaw-en-avant-premieres-au-grand-rex-de-paris.jpg" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">Fast and Furious : Hobbs and Shaw </a></div>
-                            <p>Hobbs, sadık bir kanun adamıdır. Shaw ise kanunsuz bir kaçak. Shaw, Hobbs’a suikast yapmaya kalkışmıştır. Hobbs, Shaw’u hapse göndermiştir.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/kod-adı-angel-770x433.png" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">Kod Adı : Angel</a></div>
-                            <p>Gizli Servis üyesi ve başkan koruması Mike Banning'i, Başkan Allan Trumball'un hayatını tehdit eden bir hava saldırısı sonucunda hayatını ve kariyer seçimlerini sorgulamaya başlarken görüyoruz.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/sarbasa1280e720.jpg" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">Sarbaşa</a></div>
-                            <p> Üniversite sınavına hazırlanan Ussal, moda tasarımcısı olmak isteyen abisi, kuzenleri, müzisyen olmak isteyen Sabri ve basketbol antrenörü Kürşad ile birlikte yaşamaktadır.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/HO00003925_637025905754306816_45-25-kusursuzcinayet.png" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">45-25 Kusursuz Cinayet</a></div>
-                            <p>9. Sosyal Medya Ödülleri töreninde ödül alan sosyal medya fenomenleri acımasızca öldürülürken, işlenen her cinayetin ardından elde edilen kanıtlar, katilin bir sonraki kurban olduğunu göstermektedir.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img style="width:328px;height:296px;" src="~/Pictures/angrybirds2.jpg" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">Angry Birds 2</a></div>
-                            <p></p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img src="~/OuterTools/movie_review/dummy/thumb-7.jpg" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">Life of Pi</a></div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie-poster"><img src="~/OuterTools/movie_review/dummy/thumb-8.jpg" alt="#"></figure>
-                            <div class="movie-title"><a href="~/OuterTools/movie_review/single.html">The Colony</a></div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-                        </div>
-                    </div> <!-- .movie-list -->
+                        @foreach (Movie item in Model.Item2)
+                        {
+                            <div class="movie">
+                                <figure class="movie-poster"><img style="width:328px;height:296px;" src="@item.ImagePath" alt="#"></figure>
+                                <div class="movie-title"><a href="~/Member/SingleMovie">@item.MovieName</a></div>
+                                <p>@item.MovieSummary</p>
+                            </div>
+                        }
+                    </div>
+
 
                     <div class="pagination">
                         <a href="#" class="page-number prev"><i class="fa fa-angle-left"></i></a>
@@ -161,7 +127,7 @@
                             <p>CineFlex hakkında tüm detaylara "Hakkımızda" ya tıklayarak ulaşabilirsiniz.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="widget">
                             <h3 class="widget-title">Son Görüntülenen Filmler</h3>
                             <ul class="no-bullet">
@@ -172,7 +138,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <div class="widget">
                             <h3 class="widget-title">Sosyal Medya</h3>
                             <ul class="no-bullet">
@@ -183,14 +149,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="widget">
-                            <h3 class="widget-title">Haber Bülteni</h3>
-                            <form action="#" class="subscribe-form">
-                                <input type="text" placeholder="Email Adresiniz">
-                            </form>
-                        </div>
-                    </div>
+                 
                 </div> <!-- .row -->
 
                 <div class="colophon">CineFlex 2003, tüm hakları saklıdır.</div>

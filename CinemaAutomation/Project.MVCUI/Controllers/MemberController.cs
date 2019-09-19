@@ -30,7 +30,7 @@ namespace Project.MVCUI.Controllers
         }
         public ActionResult Movies(int? page)
         {
-            return View((Tuple.Create(movp.SelectActives(), genrp.SelectActives().ToPagedList(page ?? 1, 9))));
+            return View(Tuple.Create(genrp.SelectActives(), movp.SelectActives().ToPagedList(page ?? 1, 9)));
         }
         public ActionResult ContactUs()
         {
