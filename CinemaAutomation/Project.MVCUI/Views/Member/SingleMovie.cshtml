@@ -43,9 +43,11 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
-                                <div class="log-arrow-up"></div>
-                                <li>@Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)<img src="~/OuterTools/movie_review/images/icon-contact-user.png" /></a></li>
-                                <li><img src="~/OuterTools/movie_review/images/loginp.png" />  @Html.ActionLink("Giriş Yap", "Login", "Home", new { id = "" }, null) </li>
+                                <div class="log-arrow-up">
+                                    <li><img src="~/OuterTools/movie_review/images/icon-contact-user.png" /> @Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)</li>  <br />
+
+                                    <li><img src="~/OuterTools/movie_review/images/loginp.png" />  @Html.ActionLink("Giriş Yap", "Login", "Home", new { id = "" }, null) </li>
+                                </div>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
