@@ -1,0 +1,105 @@
+﻿@model Tuple<List<Genre>, Movie>
+@{
+    ViewBag.Title = "UpdateMovie";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel-body">
+    <div class="form">
+
+        @using (Html.BeginForm("UpdateMovie", "RealMovie", FormMethod.Post, new { @class = "cmxform form-horizontal tasi-form", enctype = "multipart/form-data" }))
+        {
+
+            @Html.HiddenFor(x => x.Item2.MovieID)
+            <div class="form-group ">
+                <label for="firstname" class="control-label col-lg-2">Film Adı</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.MovieName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="lastname" class="control-label col-lg-2">Film Süresi</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.ScreenTime, new { @class = "form-control", type = "number" })
+
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="username" class="control-label col-lg-2">Türü</label>
+                <div class="col-lg-6">
+                    @Html.DropDownListFor(x => x.Item2.GenreID, new SelectList(Model.Item1, "GenreID", "GenreName"), "Lutfen Seçiniz", new { @class = "form-control" })
+
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="description" class="control-label col-lg-2">Özet</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.MovieSummary, new { style = "height:100px;width:600px" })
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="password" class="control-label col-lg-2">Formatlar</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.Format, new { @class = "form-control", type = "string" })
+
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="lastname" class="control-label col-lg-2">Vizyon Tarihi</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.ShowDate, new { @class = "form-control", type = "datetime" })
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="firstname" class="control-label col-lg-2">Yönetmen</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.Director, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="firstname" class="control-label col-lg-2">Oyuncular</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.Item2.Actors, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-2">Afiş Yükle</label>
+                <div class="col-md-9">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="fileupload-new thumbnail" style="width: 570px; height: 516px;">
+                            <img src="@Model.Item2.ImagePath" alt="" />
+                        </div>
+                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                        @if (Model.Item2.ImagePath != "Dosya boş")
+                        {
+                            @Html.CheckBox("resimSil")
+                            <b style="color:red">Resmi Sil?</b>
+                        }
+
+                        <div>
+                            <span class="btn btn-white btn-file">
+                                <span class="fileupload-new"><i class="icon-paper-clip"></i> Fotoğraf Seç</span>
+                                <span class="fileupload-exists"><i class="icon-undo"></i> Değiştir</span>
+                                <input name="resim" type="file" class="default" />
+                            </span>
+                            <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Fotoğrafı Kaldır</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-6">
+                    <button class="btn btn-danger" type="submit">Save</button>
+                    @Html.ActionLink("İptal Et", "MovieList", null, new { @class = "btn btn-default" })
+
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+

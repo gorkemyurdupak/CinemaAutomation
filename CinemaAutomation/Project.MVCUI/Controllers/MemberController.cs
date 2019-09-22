@@ -40,9 +40,9 @@ namespace Project.MVCUI.Controllers
         {
             return View();
         }
-        public ActionResult GetByGenres(int id)
+        public ActionResult GetByGenres(int? id,int? page)
         {
-            return View(Tuple.Create(movp.Where(x => x.GenreID == id), genrp.SelectActives()));
+            return View(Tuple.Create(movp.Where(x => x.GenreID == id).ToPagedList(page ?? 1, 9), genrp.SelectActives()));
         }
     }
 }

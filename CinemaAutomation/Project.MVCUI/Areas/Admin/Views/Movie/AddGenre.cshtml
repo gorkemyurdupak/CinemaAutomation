@@ -1,0 +1,29 @@
+﻿@model Genre
+@{
+    ViewBag.Title = "AddGenre";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="panel-body">
+    <div class="form">
+        @using (Html.BeginForm("AddGenre", "Movie", FormMethod.Post, new { @class = "cmxform form-horizontal tasi-form", enctype = "multipart/form-data" }))
+        {
+            <div class="form-group ">
+                <label for="firstname" class="control-label col-lg-2">Tür Adı</label>
+                <div class="col-lg-6">
+                    @Html.TextBoxFor(x => x.GenreName, new { @class = "form-control" })
+                </div>
+            </div>
+  
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-6">
+                    <button class="btn btn-danger" type="submit">Gönder</button>
+                    @Html.ActionLink("İptal Et", "GenreList", null, new { @class = "btn btn-default" })
+
+                </div>
+            </div>
+
+
+        }
+    </div>
+</div>
+

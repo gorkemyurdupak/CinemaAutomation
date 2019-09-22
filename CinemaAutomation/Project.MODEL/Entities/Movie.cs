@@ -25,6 +25,8 @@ namespace Project.MODEL.Entities
         public string Actors { get; set; }
         public string Format { get; set; } //2D,3D,Altyazı vs...
         public string MovieSummary { get; set; }
+        [Range(0,10)]
+        public decimal? Rating { get; set; }
         public string MovieComment { get; set; }
         public bool IsPlaying { get; set; } //Vizyon da mı, değil mi ?
 

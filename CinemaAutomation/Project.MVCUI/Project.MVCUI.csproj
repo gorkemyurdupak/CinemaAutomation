@@ -1731,6 +1731,7 @@
     <Content Include="OuterTools\movie_review\js\tasks.js" />
     <Content Include="OuterTools\movie_review\js\toucheffects.js" />
     <Content Include="OuterTools\movie_review\review.html" />
+    <Content Include="OuterTools\movie_review\stylealternative.css" />
     <Content Include="Pictures\469656-fast-furious-hobbs-shaw-en-avant-premieres-au-grand-rex-de-paris.jpg" />
     <Content Include="Pictures\angrybirds2.jpg" />
     <Content Include="Pictures\duzenbazlar-kulubusingle.png" />
@@ -1975,7 +1976,12 @@
     <Content Include="OuterTools\movie_review\assets\xchart\README.md" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Movie\MovieList.cshtml" />
+    <Content Include="Areas\Admin\Views\Movie\GenreList.cshtml" />
+    <Content Include="Areas\Admin\Views\RealMovie\MovieList.cshtml" />
+    <Content Include="Areas\Admin\Views\RealMovie\AddMovie.cshtml" />
+    <Content Include="Areas\Admin\Views\RealMovie\MovieDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\RealMovie\UpdateMovie.cshtml" />
+    <Content Include="Areas\Admin\Views\Movie\AddGenre.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1993,6 +1999,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\MovieController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RealMovieController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2073,6 +2080,7 @@
     <Content Include="Views\Home\GenderController.cshtml" />
     <Content Include="Views\Home\ForgotPassword.cshtml" />
     <Content Include="Views\Home\ResetPassword.cshtml" />
+    <Content Include="Views\Member\GetByGenres.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
