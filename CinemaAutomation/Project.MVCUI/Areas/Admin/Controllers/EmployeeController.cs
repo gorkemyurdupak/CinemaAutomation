@@ -22,7 +22,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         // GET: Admin/Employee
         public ActionResult ListEmployee()
         {
-            if (Session["SuperAdmin"]!=null)
+            if (Session["SuperAdmin"]!=null) 
             {
                 return View(emp.SelectActives());
             }
