@@ -12,17 +12,32 @@ namespace Project.MVCUI.Areas.Admin.Controllers
     public class EmployeeController : Controller
     {
         EmployeeRepository emp;
-        AppUserRepository aprep;
 
         public EmployeeController()
         {
             emp = new EmployeeRepository();
-            aprep = new AppUserRepository();
+
         }
         // GET: Admin/Employee
        public ActionResult ListEmployee()
         {
             return View(emp.SelectActives());
         }
+        public ActionResult AddEmployee()
+        {
+            return View(new Employee());
+        }
+        [HttpPost]
+        public ActionResult AddEmployee(Employee item)
+        {
+            emp.Add(item);
+            return RedirectToAction("ListEmployee");
+        }
+        public ActionResult DeleteEmployee(int id)
+        {
+            emp.Delete(emp.GetByID(id));
+            return RedirectToAction("ListEmployee");
+        }
+        
     }
 }

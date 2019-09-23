@@ -36,9 +36,9 @@ namespace Project.MVCUI.Controllers
         {
             return View();
         }
-        public ActionResult SingleMovie()
+        public ActionResult SingleMovie(int id)
         {
-            return View();
+            return View(movp.Default(x => x.MovieID == id));
         }
         public ActionResult GetByGenres(int? id,int? page)
         {

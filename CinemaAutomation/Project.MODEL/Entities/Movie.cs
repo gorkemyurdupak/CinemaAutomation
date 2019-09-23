@@ -30,6 +30,11 @@ namespace Project.MODEL.Entities
         public string MovieComment { get; set; }
         public bool IsPlaying { get; set; } //Vizyon da mı, değil mi ?
 
+        public Movie()
+        {
+            IsPlaying = true;
+        }
+
         //Relational Properties
         public virtual List<Ticket> Tickets { get; set; }
         public virtual List<Salon> Salons { get; set; }

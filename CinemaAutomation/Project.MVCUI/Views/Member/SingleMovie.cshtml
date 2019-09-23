@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@model Movie
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="icon" href="~/OuterTools/movie_review/images/logo@2x.png">
-    <title>CineFlex | FilmAdı</title>
+    <title>CineFlex</title>
 
     <!-- Loading third party fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
@@ -80,39 +81,41 @@
                     <div class="breadcrumbs">
                         @Html.ActionLink("Ana Sayfa", "Index")
                         @Html.ActionLink("Filmler", "Movies")
-                        <span>Düzenbazlar Kulübü</span>
+                        <span style="color:red">@Model.MovieName</span>
                     </div>
 
                     <div class="content">
                         <div class="row">
                             <div class="col-md-6">
-                                <figure class="movie-poster"><img src="~/Pictures/duzenbazlar-kulubusingle.png" alt="#"></figure>
+                                <figure class="movie-poster"><img src="@Model.ImagePath" alt="#"></figure>
                             </div>
                             <div class="col-md-6">
-                                <h2 class="movie-title">Düzenbazlar Kulübü</h2>
+                                <h2 style="color:red" class="movie-title">@Model.MovieName</h2>
                                 <div class="movie-summary">
-                                    <p>Borsada çalışan Joe Hunt ve eski okul arkadaşı Dean Karny, şehrin en varlıklı yatırımcılarından Ron Levin’in çılgın fikirleriyle BBC adlı bir saadet zinciri kurarlar. Ancak gerçekte kimin dolandırıldığı, kimin kime oyun oynadığı belli değildir. Şehrin jet sosyetesinden, devasa şirketlerden BBC’ye yatırım teklifleri yağmakta; insanlar emeklilik günleri, çocuklarının eğitimi için yaptıkları birikimleri bu esrarengiz zincire teslim etmektedir. Genç milyarderlerin dizginsiz hırsı ile şirketleri kısa sürede Los Angeles’ın yıldızı haline gelince, FBI’ın radarına girmeleri de çok sürmeyecektir. </p>
+                                    
 
                                 </div>
                                 <ul class="movie-meta">
                                     <li>
-                                        <strong>Rating:</strong>
-                                        <div class="star-rating" title="Rated 9.2 out of 10"><span style="width:80%"><strong class="rating">9.2</strong> out of 10</span></div>
+                                        <strong style="color:blueviolet">Rating:</strong>
+                                        <div class="star-rating" title="@Model.Rating"><span style="width:80%"><strong class="rating">9.2</strong> out of 10</span></div>
                                     </li>
-                                    <li><strong>Süre:</strong> 108 Dakika</li>
-                                    <li><strong>Vizyon Tarihi:</strong> 06.09.2019</li>
-                                    <li><strong>Kategori:</strong> Biyografi</li>
+                                    <li><strong style="color:blueviolet">Süre:</strong> @Model.ScreenTime dakika</li>
+                                    <li><strong style="color:blueviolet">Vizyon Tarihi:</strong> @Model.ShowDate</li>
+                                    <li><strong style="color:blueviolet">Türü:</strong> @Model.MovieGenre.GenreName</li>
+                                    <li><strong style="color:blueviolet">Formatlar: </strong> @Model.Format</li>
                                 </ul>
-
+                                
                                 <ul class="starring">
-                                    <li><strong>Yönetmen:</strong> James Cox</li>
-                                    <li><strong>Formatlar:</strong> 2D, Altyazılı</li>
-                                    <li><strong>Oyuncular:</strong>  Kevin Spacey, Taron Egerton, Ansel Elgort</li>
+                                    <li><strong style="color:blueviolet">Yönetmen:</strong> @Model.Director</li>
+                                    
+                                    <li><strong style="color:blueviolet">Oyuncular:</strong>  @Model.Actors</li>
                                 </ul>
                             </div>
                         </div> <!-- .row -->
                         <div class="entry-content">
-                            <p>Borsada çalışan Joe Hunt ve eski okul arkadaşı Dean Karny, şehrin en varlıklı yatırımcılarından Ron Levin’in çılgın fikirleriyle BBC adlı bir saadet zinciri kurarlar. Ancak gerçekte kimin dolandırıldığı, kimin kime oyun oynadığı belli değildir. Şehrin jet sosyetesinden, devasa şirketlerden BBC’ye yatırım teklifleri yağmakta; insanlar emeklilik günleri, çocuklarının eğitimi için yaptıkları birikimleri bu esrarengiz zincire teslim etmektedir. Genç milyarderlerin dizginsiz hırsı ile şirketleri kısa sürede Los Angeles’ın yıldızı haline gelince, FBI’ın radarına girmeleri de çok sürmeyecektir.</p>
+                            <h3 style="color:blueviolet">Özet : </h3> 
+                            <h4> <p style="color:black">@Model.MovieSummary</p></h4>
                         </div>
                     </div>
                 </div>

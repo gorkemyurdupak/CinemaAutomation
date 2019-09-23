@@ -46,7 +46,7 @@ namespace Project.BLL.RepositoryPattern.BaseRepository
         {
             item.Status = DataStatus.Deleted;
             item.DeletedDate = DateTime.Now;
-            item.DeletedBy = emp.EmpFirstName;
+            
             Save();
         }
 

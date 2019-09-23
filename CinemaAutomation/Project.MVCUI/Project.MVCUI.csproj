@@ -1986,6 +1986,7 @@
     <Content Include="Areas\Admin\Views\RealMovie\UpdateMovie.cshtml" />
     <Content Include="Areas\Admin\Views\Movie\AddGenre.cshtml" />
     <Content Include="Areas\Admin\Views\Employee\ListEmployee.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\AddEmployee.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

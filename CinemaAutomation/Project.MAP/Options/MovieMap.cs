@@ -16,6 +16,8 @@ namespace Project.MAP.Options
             Property(x => x.Director).IsRequired();
             Property(x => x.MovieSummary).HasMaxLength(1000);
             Property(x => x.MovieComment).HasMaxLength(500).IsOptional();
+            Property(x => x.ImagePath).IsOptional();
+            Property(x => x.Rating).IsOptional();
         }
     }
 }

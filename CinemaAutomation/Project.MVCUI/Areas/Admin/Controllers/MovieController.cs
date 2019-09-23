@@ -34,7 +34,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         }
         public ActionResult DeleteGenre(int id)
         {
-            movp.Delete(movp.GetByID(id));
+            genrp.Delete(genrp.GetByID(id));
             return RedirectToAction("GenreList");
         }
         

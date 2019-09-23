@@ -101,8 +101,8 @@
                         {
                             <div class="movie">
                                 <figure class="movie-poster"><img style="width:328px;height:296px;" src="@item.ImagePath" alt="#"></figure>
-                                <div class="movie-title"><a href="~/Member/SingleMovie">@item.MovieName</a></div>
-                                <p>@item.MovieSummary</p>
+                                <div class="movie-title">@Html.ActionLink(item.MovieName,"SingleMovie",new {id=item.MovieID })</div>
+                                
                             </div>
                         }
                     </div>
