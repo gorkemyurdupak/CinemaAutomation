@@ -42,7 +42,7 @@ namespace Project.MVCUI.Controllers
         }
         public ActionResult GetByGenres(int? id,int? page)
         {
-            return View(Tuple.Create(movp.Where(x => x.GenreID == id).ToPagedList(page ?? 1, 9), genrp.SelectActives()));
+            return View((movp.Where(x => x.GenreID == id)));
         }
     }
 }

@@ -2090,7 +2090,6 @@
     <Content Include="Views\Home\GenderController.cshtml" />
     <Content Include="Views\Home\ForgotPassword.cshtml" />
     <Content Include="Views\Home\ResetPassword.cshtml" />
-    <Content Include="Views\Member\GetByGenres.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
