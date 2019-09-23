@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
 {
+    
     public class EmployeeController : Controller
     {
         EmployeeRepository emp;
@@ -52,6 +53,14 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
             emp.Update(item);
             return RedirectToAction("ListEmployee");
+        }
+        public ActionResult Inbox()
+        {
+            if (Session["SuperAdmin"]!=null)
+            {
+                return View();
+            }
+            return RedirectToAction("Member","Index");
         }
     }
 }

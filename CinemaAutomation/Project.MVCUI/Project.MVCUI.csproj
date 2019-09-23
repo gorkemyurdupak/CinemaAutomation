@@ -1989,6 +1989,7 @@
     <Content Include="Areas\Admin\Views\Employee\AddEmployee.cshtml" />
     <Content Include="Areas\Admin\Views\Movie\UpdateGenre.cshtml" />
     <Content Include="Areas\Admin\Views\Employee\UpdateEmployee.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\Inbox.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
