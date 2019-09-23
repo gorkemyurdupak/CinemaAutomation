@@ -37,5 +37,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             movp.Delete(movp.GetByID(id));
             return RedirectToAction("GenreList");
         }
+        
+    
     }
 }

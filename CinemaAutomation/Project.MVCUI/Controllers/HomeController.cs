@@ -87,6 +87,24 @@ namespace Project.MVCUI.Controllers
         public ActionResult Login(AppUser item)
         {
             if (aprep.Any
+             (
+             x => x.UserName == item.UserName &&
+             x.Password == item.Password &&
+
+             x.UserRole == Role.SuperAdmin
+             ))
+            {
+
+                AppUser girisYapan = aprep.Default(x => x.UserName == item.UserName && x.Password == item.Password);
+                if (girisYapan.IsActive == false)
+                {
+                    ViewBag.AktifDegil = "Lutfen Hesabınızı aktif hale getiriniz";
+                    return View("RegisterOk");
+                }
+                Session["SuperAdmin"] = girisYapan;
+                return RedirectToAction("ListEmployee","Employee",new { area="Admin"});//burada Admin kendi areasına yönlendirilmeli
+            }
+            else if (aprep.Any
                 (
                 x => x.UserName == item.UserName &&
                 x.Password == item.Password &&
@@ -105,6 +123,7 @@ namespace Project.MVCUI.Controllers
                 Session["admin"] = girisYapan;
                 return RedirectToAction("");//burada Admin kendi areasına yönlendirilmeli
             }
+             
             else if (aprep.Any
                 (
                 x => x.UserName == item.UserName &&

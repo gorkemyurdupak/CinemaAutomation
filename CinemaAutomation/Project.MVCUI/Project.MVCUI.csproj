@@ -111,6 +111,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="OuterTools\LightBox\lightbox-plus-jquery.min.js" />
+    <Content Include="OuterTools\LightBox\lightbox.min.css" />
+    <Content Include="OuterTools\LightBox\lock_screen.html" />
     <Content Include="OuterTools\movie_review\about.html" />
     <Content Include="OuterTools\movie_review\assets\advanced-datatable\docs\34cdb56b2c.html" />
     <Content Include="OuterTools\movie_review\assets\advanced-datatable\docs\DataTable.defaults.columns.html" />
@@ -1982,6 +1985,7 @@
     <Content Include="Areas\Admin\Views\RealMovie\MovieDetail.cshtml" />
     <Content Include="Areas\Admin\Views\RealMovie\UpdateMovie.cshtml" />
     <Content Include="Areas\Admin\Views\Movie\AddGenre.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\ListEmployee.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1998,10 +2002,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Admin\Controllers\MovieController.cs" />
     <Compile Include="Areas\Admin\Controllers\RealMovieController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\SuperAdminAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Global.asax.cs">
