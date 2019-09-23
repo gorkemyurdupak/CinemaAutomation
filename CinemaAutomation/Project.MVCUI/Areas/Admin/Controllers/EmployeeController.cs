@@ -19,9 +19,13 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
         }
         // GET: Admin/Employee
-       public ActionResult ListEmployee()
+        public ActionResult ListEmployee()
         {
-            return View(emp.SelectActives());
+            if (Session["SuperAdmin"]!=null)
+            {
+                return View(emp.SelectActives());
+            }
+            return RedirectToAction("Movie","MovieList");
         }
         public ActionResult AddEmployee()
         {
@@ -38,6 +42,16 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             emp.Delete(emp.GetByID(id));
             return RedirectToAction("ListEmployee");
         }
-        
+        public ActionResult UpdateEmployee(int id)
+        {
+            return View(emp.GetByID(id));
+        }
+        [HttpPost]
+        public ActionResult UpdateEmployee(Employee item)
+        {
+
+            emp.Update(item);
+            return RedirectToAction("ListEmployee");
+        }
     }
 }

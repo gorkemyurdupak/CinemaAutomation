@@ -121,7 +121,7 @@ namespace Project.MVCUI.Controllers
                     return View("RegisterOk");
                 }
                 Session["admin"] = girisYapan;
-                return RedirectToAction("");//burada Admin kendi areasına yönlendirilmeli
+                return RedirectToAction("MovieList", "RealMovie", new { area = "Admin" });//burada Admin kendi areasına yönlendirilmeli
             }
              
             else if (aprep.Any
@@ -150,7 +150,7 @@ namespace Project.MVCUI.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         public ActionResult ForgotPassword(AppUser item)
         {
             if (aprep.Any(x=> x.Email==item.Email))

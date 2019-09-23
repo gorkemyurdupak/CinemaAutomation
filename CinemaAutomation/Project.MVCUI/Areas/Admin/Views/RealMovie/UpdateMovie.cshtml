@@ -10,7 +10,7 @@
         @using (Html.BeginForm("UpdateMovie", "RealMovie", FormMethod.Post, new { @class = "cmxform form-horizontal tasi-form", enctype = "multipart/form-data" }))
         {
 
-            @Html.HiddenFor(x => x.Item2.MovieGenre.GenreID)
+            @Html.HiddenFor(x => x.Item2.MovieID)
             <div class="form-group ">
                 <label for="firstname" class="control-label col-lg-2">Film Adı</label>
                 <div class="col-lg-6">
@@ -27,7 +27,7 @@
             <div class="form-group ">
                 <label for="username" class="control-label col-lg-2">Türü</label>
                 <div class="col-lg-6">
-                    @Html.DropDownListFor(x => x.Item2.GenreID, new SelectList(Model.Item1, "GenreID", "GenreName"), "Lutfen Seçiniz", new { @class = "form-control" })
+                    @Html.DropDownListFor(x => x.Item2.GenreID, new SelectList(Model.Item1, "GenreID", "GenreName"), "Lütfen Seçiniz", new { @class = "form-control" })
 
                 </div>
             </div>

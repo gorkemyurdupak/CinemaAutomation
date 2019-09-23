@@ -37,7 +37,18 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             genrp.Delete(genrp.GetByID(id));
             return RedirectToAction("GenreList");
         }
-        
-    
+        public ActionResult UpdateGenre(int id)
+        {
+            return View(genrp.GetByID(id));
+        }
+        [HttpPost]
+        public ActionResult UpdateGenre(Genre item)
+        {
+           
+            genrp.Update(item);
+            return RedirectToAction("GenreList");
+        }
+
+
     }
 }
