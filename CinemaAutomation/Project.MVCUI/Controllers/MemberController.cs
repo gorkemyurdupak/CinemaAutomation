@@ -20,9 +20,9 @@ namespace Project.MVCUI.Controllers
             genrp = new GenreRepository();
         }
         // GET: Member
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View();
+            return View(movp.SelectActives());
         }
         public ActionResult About()
         {
@@ -42,7 +42,7 @@ namespace Project.MVCUI.Controllers
         }
         public ActionResult GetByGenres(int? id,int? page)
         {
-            return View((movp.Where(x => x.GenreID == id)));
+            return View(Tuple.Create(movp.Where(x => x.GenreID == id).ToPagedList(page ?? 1, 9), genrp.SelectActives()));
         }
     }
 }

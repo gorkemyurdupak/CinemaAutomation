@@ -1,0 +1,120 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model Tuple<IPagedList<Movie>, List<Genre>>
+
+@{
+    ViewBag.Title = "GetByGenres";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>CineFlex | Film Tür</title>
+</head>
+<body>
+    <div id="site-content">
+        <main class="main-content">
+            <div class="container">
+                <div class="page">
+                    <div class="breadcrumbs">
+                        @Html.ActionLink("Ana Sayfa", "Index")
+                        <span>@Html.ActionLink("Filmler", "Movies")</span>
+                    </div>
+                    @*<h2 style="color:red">@Model.Item1[0].MovieGenre.GenreName</h2>*@
+                    <div class="filters">
+                        <select name="#" id="#" placeholder="Kategori Seçin">
+
+                            @foreach (Genre item in Model.Item2)
+                            {
+
+                                if (item.ID == Model.Item2[0].GenreID)
+                                {
+                                    <li>
+                                        @Html.ActionLink(item.GenreName, "GetByGenres", new { item.GenreID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })
+                                    </li>
+
+                                }
+                                else
+                                {
+                                    <li>
+                                        @Html.ActionLink(item.GenreName, "GetByGenres", new { item.GenreID }, new { @class = "btn btn-primary" })
+                                    </li>
+
+                                }
+
+                            }
+                        </select>
+                    </div>
+
+                    <div id="OzelUrunler">
+
+                        <div style="float:right">
+                            @Html.PagedListPager(Model.Item1, page => Url.Action("GetByGenres", new { page, id = Model.Item1.First().GenreID }))
+                        </div> <br /> <br /> <br /> <br /> <br />
+
+                        <div class="movie-list">
+                            @foreach (Movie item in Model.Item1)
+                            {
+                                <div class="movie">
+                                    <figure class="movie-poster"><img style="width:328px;height:296px;" src="@item.ImagePath" alt="#"></figure>
+                                    <div class="movie-title">@Html.ActionLink(item.MovieName, "SingleMovie", new { id = item.MovieID })</div>
+
+                                </div>
+                            }
+                        </div>
+                        <div style="float:right">
+                            @Html.PagedListPager(Model.Item1, page => Url.Action("GetByGenres", new { page, id = Model.Item1.First().GenreID }))
+                        </div> <br /> <br /> <br /> <br /> <br />
+
+                        @*<div class="pagination">
+                                <div id="OzelUrunler">
+                                    <div style="float:right">
+                                        @Html.PagedListPager(Model.Item2, page => Url.Action("Movie","Member", new { page }))
+                                    </div>
+                                    <a href="#" class="page-number prev"><i class="fa fa-angle-left"></i></a>
+                                    <span class="page-number current">1</span>
+                                    <a href="#" class="page-number">2</a>
+                                    <a href="#" class="page-number">3</a>
+                                    <a href="#" class="page-number">4</a>
+                                    <a href="#" class="page-number">5</a>
+                                    <div style="float:right">
+                                        @Html.PagedListPager(Model.Item2, page => Url.Action("Movie","" new { page }))
+                                    </div>
+                                    <a href="#" class="page-number next"><i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>*@
+                    </div> <!-- .container -->
+        </main>
+
+    </div>
+    <!-- Default snippet for navigation -->
+</body>
+
+@*<script>
+        $(function () {
+            $("#slider-range a").mouseup(function () {
+
+                var spanValue = $("#slider-range-amount").text();
+
+                $.ajax({
+                    url: "https://localhost:44317/Member/FiltreKeywordUrunleri",
+                    type: "Get",
+                    data: { fiyat: spanValue,genreId:@Model.Item2.First().GenreID },
+                    success: function (gelenSayfa) {
+                        $("#OzelUrunler").html(gelenSayfa);
+                    }
+                })
+            })
+            $("#txtSearch").keyup(function () {
+                var keyword = $("#txtSearch").val();
+                $.ajax({
+
+                    url: "https://localhost:44317/Member/SearchProduct",
+                    type: "Get",
+                    data: { keyword: keyword },
+                    success: function (donenVeri) {
+                        $("#OzelUrunler").html(donenVeri);
+                    }
+                })
+            })
+        })
+    </script>*@
+
