@@ -102,7 +102,7 @@ namespace Project.MVCUI.Controllers
                     return View("RegisterOk");
                 }
                 Session["SuperAdmin"] = girisYapan;
-                return RedirectToAction("ListEmployee","Employee",new { area="Admin"});//burada Admin kendi areasına yönlendirilmeli
+                return RedirectToAction("ListEmployee","Employee",new { area="Admin"});
             }
             else if (aprep.Any
                 (

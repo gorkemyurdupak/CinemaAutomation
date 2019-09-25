@@ -19,31 +19,30 @@
                         <span>@Html.ActionLink("Filmler", "Movies")</span>
                     </div>
                     @*<h2 style="color:red">@Model.Item1[0].MovieGenre.GenreName</h2>*@
-                    <div class="filters">
-                        <select name="#" id="#" placeholder="Kategori Seçin">
+                    
 
                             @foreach (Genre item in Model.Item2)
                             {
-
+                               
                                 if (item.ID == Model.Item2[0].GenreID)
                                 {
                                     <li>
-                                        @Html.ActionLink(item.GenreName, "GetByGenres", new { item.GenreID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })
+                                        @Html.ActionLink(item.GenreName, "GetByGenres", new {id= item.GenreID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })
                                     </li>
+
+
 
                                 }
                                 else
                                 {
                                     <li>
-                                        @Html.ActionLink(item.GenreName, "GetByGenres", new { item.GenreID }, new { @class = "btn btn-primary" })
+                                        @Html.ActionLink(item.GenreName, "GetByGenres", new {id= item.GenreID }, new { @class = "btn btn-primary" })
                                     </li>
 
                                 }
 
                             }
-                        </select>
-                    </div>
-
+                       
                     <div id="OzelUrunler">
 
                         <div style="float:right">
