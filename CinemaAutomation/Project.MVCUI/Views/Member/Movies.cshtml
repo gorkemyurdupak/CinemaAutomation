@@ -21,63 +21,70 @@
                         @Html.ActionLink("Ana Sayfa", "Index")
                         <span>Filmler</span>
                     </div>
-                    <div class="dropdown list-group">
-                        <ul class="list-group">
+                    <div>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                Tür Seçin
+                            </button>
+                            <div class="dropdown-menu">
+                                @foreach (Genre item1 in Model.Item1)
+                                {
 
-                            @foreach (Genre item1 in Model.Item1)
+                                    <li>
+                                        @Html.ActionLink(item1.GenreName, "GetByGenres", new { id = item1.GenreID }, new { @class = "btn btn-warning" })
+
+                                    </li>
+
+
+                                }
+
+                            </div>
+                            <div style="float:right">
+                                @Html.PagedListPager(Model.Item2, page => Url.Action("Movies", new { page }))
+                            </div>
+                        </div>
+                       
+                        <div class="filters">
+                            
+                           
+                            
+                        </div>
+
+                        <div class="row movie-list">
+
+                            @foreach (Movie item in Model.Item2)
                             {
-                               
-                                <li>
-                                    @Html.ActionLink(item1.GenreName, "GetByGenres", new { id = item1.GenreID }, new { @class = "btn btn-primary" })
 
-                                </li>
-                            }
-
-                        </ul>
-                    </div>
-                <div class="filters">
-                    <select name="#" id="#" placeholder="Tür Seçin">
-                    </select>
-                    <div style="float:right">
-                        @Html.PagedListPager(Model.Item2, page => Url.Action("Movies", new { page }))
-                    </div>
-                </div>
-                    
-                    <div class="row movie-list">
-
-                        @foreach (Movie item in Model.Item2)
-                        {
-
-                            @*<div class="movie">
+                                @*<div class="movie">
                     <figure class="movie-poster"><img style="width:328px;height:296px;" src="@item.ImagePath" alt="#"></figure>
                     <div class="movie-title">
                         @Html.ActionLink(item.MovieName, "SingleMovie", new { id = item.MovieID })
                 </div>*@
 
-                            <div class="col-md-4">
-                                <section class="panel">
-                                    <div class="pro-img-box">
-                                        <img style="width:328px;height:296px;" src="@item.ImagePath" />
+                                <div class="col-md-4">
+                                    <section class="panel">
+                                        <div class="pro-img-box">
+                                            <img style="width:328px;height:296px;" src="@item.ImagePath" />
 
 
-                                    </div>
-                                    <div class="panel-body text-center">
-                                        <h4>
-                                            <a href="#" class="pro-title">
-                                                @Html.ActionLink(item.MovieName, "SingleMovie", new { id = item.MovieID })
-                                            </a>
-                                        </h4>
+                                        </div>
+                                        <div class="panel-body text-center">
+                                            <h4>
+                                                <a href="#" class="pro-title">
+                                                    @Html.ActionLink(item.MovieName, "SingleMovie", new { id = item.MovieID })
+                                                </a>
+                                            </h4>
 
-                                    </div>
-                                </section>
-                            </div>
+                                        </div>
+                                    </section>
+                                </div>
 
-                        }
+                            }
 
 
-                    </div>
+                        </div>
 
-                </div> <!-- .container -->
+                    </div> <!-- .container -->
                         <div class="pagination">
                             <div id="OzelUrunler">
 

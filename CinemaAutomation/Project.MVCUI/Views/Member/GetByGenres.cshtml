@@ -19,29 +19,37 @@
                         <span>@Html.ActionLink("Filmler", "Movies")</span>
                     </div>
                     @*<h2 style="color:red">@Model.Item1[0].MovieGenre.GenreName</h2>*@
-                    
+                <div class="dropdown">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Tür Seçin
+                    </button>
+                    <div class="dropdown-menu">
+                        @foreach (Genre item in Model.Item2)
+                        {
 
-                            @foreach (Genre item in Model.Item2)
+                            if (item.ID == Model.Item2[0].GenreID)
                             {
-                               
-                                if (item.ID == Model.Item2[0].GenreID)
-                                {
-                                    <li>
-                                        @Html.ActionLink(item.GenreName, "GetByGenres", new {id= item.GenreID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })
-                                    </li>
+                                <li>
+                                    @Html.ActionLink(item.GenreName, "GetByGenres", new { id = item.GenreID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })
+                                </li>
 
 
-
-                                }
-                                else
-                                {
-                                    <li>
-                                        @Html.ActionLink(item.GenreName, "GetByGenres", new {id= item.GenreID }, new { @class = "btn btn-primary" })
-                                    </li>
-
-                                }
 
                             }
+                            else
+                            {
+                                <li>
+                                    @Html.ActionLink(item.GenreName, "GetByGenres", new { id = item.GenreID }, new { @class = "btn btn-warning" })
+                                </li>
+
+                            }
+
+                        }
+
+                    </div>
+                </div>
+
+                            
                        
                     <div id="OzelUrunler">
 
