@@ -37,22 +37,31 @@
                     <ul class="nav pull-right top-menu">
                         <!-- user login dropdown start-->
                         <li class="dropdown">
+                            @if (HttpContext.Current.Session["userid"] != null)
+                            {
+                            <ul class="nav pull-right">
+                                <li style="color:violet;height:50px;width:50px;font-size:15px">  Hoşgeldiniz,Sayın  @Session["user"]</li>
+                            </ul>
+                            }
+                            else
+                            {
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 Bize Katılın
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up">
-
-                                    <li><img src="~/OuterTools/movie_review/images/icon-contact-user.png" /> @Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)</li> </br>
+                                   
+                                    <li><img src="~/OuterTools/movie_review/images/icon-contact-user.png" /> @Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)</li> <br />
 
                                     <li><img src="~/OuterTools/movie_review/images/loginp.png" />  @Html.ActionLink("Giriş Yap", "Login", "Home", new { id = "" }, null) </li>
-
                                 </div>
                             </ul>
-                        </li>
-                        <!-- user login dropdown end -->
-                    </ul>
+                            
+                             }
+                            </li>
+                            <!-- user login dropdown end -->
+                        </ul>
                     <!--search & user info end-->
                 </div>
 

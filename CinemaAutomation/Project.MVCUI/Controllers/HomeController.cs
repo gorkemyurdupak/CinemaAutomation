@@ -158,6 +158,8 @@ namespace Project.MVCUI.Controllers
                     return View("RegisterOk");
                 }
                 Session["member"] = girisYapan;
+              Session["user"] = (girisYapan.AppUserProfile.UserFirstName+""+girisYapan.AppUserProfile.UserLastName);
+                Session["userid"] = girisYapan.UserName;
                 return RedirectToAction("Index", "Member");
             }
             ViewBag.KullaniciBulunamadi = "Kullanıcı adı veya şifreniz hatalı olabilir.Böyle bir kullanıcı bulunamadı.";
