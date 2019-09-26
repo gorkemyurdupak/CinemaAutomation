@@ -14,6 +14,7 @@ namespace Project.MODEL.Entities
         public decimal TicketPrice { get; set; }
         public short TicketCount { get; set; }
         public TicketGenre TicketGenre { get; set; } //öğrenci,vip vs bileti.
+        public DateTime? TicketDay { get; set; }
         public decimal Discount
         {
             get

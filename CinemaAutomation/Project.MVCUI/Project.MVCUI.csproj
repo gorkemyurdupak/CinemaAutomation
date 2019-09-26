@@ -2011,9 +2011,11 @@
     <Compile Include="Areas\Admin\Controllers\RealMovieController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MultiAuthentication.cs" />
     <Compile Include="AuthenticationClasses\SuperAdminAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2104,6 +2106,7 @@
     <Folder Include="Models\MyTools\" />
     <Folder Include="OuterTools\movie_review\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="OuterTools\movie_review\sass\pages\" />
+    <Folder Include="Views\Sales\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">

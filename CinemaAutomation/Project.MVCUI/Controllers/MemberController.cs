@@ -44,5 +44,6 @@ namespace Project.MVCUI.Controllers
         {
             return View(Tuple.Create(movp.Where(x => x.GenreID == id).ToPagedList(page ?? 1, 9), genrp.SelectActives()));
         }
+
     }
 }

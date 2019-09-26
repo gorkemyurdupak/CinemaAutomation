@@ -1,6 +1,7 @@
 ﻿using Project.BLL.RepositoryPattern.ConcreteRepository;
 using Project.COMMON.Tools;
 using Project.MODEL.Entities;
+using Project.MVCUI.AuthenticationClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ using System.Web.Mvc;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
 {
+    
+   [MultiAuthentication]
     public class RealMovieController : Controller
     {
         MovieRepository movp;
@@ -19,6 +22,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             genrp = new GenreRepository();
         }
         // GET: Admin/RealMovie
+      
         public ActionResult MovieList()
         {
             return View(movp.SelectActives());

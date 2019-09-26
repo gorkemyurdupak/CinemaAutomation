@@ -10,6 +10,7 @@ using System.Web;
 using System.Web.Mvc;
 using Project.DAL.Context;
 using Project.BLL.SingletonPattern;
+using System.Web.Security;
 
 namespace Project.MVCUI.Controllers
 {
@@ -119,6 +120,9 @@ namespace Project.MVCUI.Controllers
                     return View("RegisterOk");
                 }
                 Session["SuperAdmin"] = girisYapan;
+                Session["user"] = (girisYapan.AppUserProfile.UserFirstName + " " + girisYapan.AppUserProfile.UserLastName);
+                Session["userid"] = girisYapan.UserName;
+               
                 return RedirectToAction("ListEmployee","Employee",new { area="Admin"});
             }
             else if (aprep.Any
@@ -138,6 +142,8 @@ namespace Project.MVCUI.Controllers
                     return View("RegisterOk");
                 }
                 Session["admin"] = girisYapan;
+                Session["user"] = (girisYapan.AppUserProfile.UserFirstName + "" + girisYapan.AppUserProfile.UserLastName);
+                Session["userid"] = girisYapan.UserName;
                 return RedirectToAction("MovieList", "RealMovie", new { area = "Admin" });//burada Admin kendi areasına yönlendirilmeli
             }
              
@@ -217,6 +223,14 @@ namespace Project.MVCUI.Controllers
             }
 
             return cookiedeSaklanan;
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();  // it will clear the session at the end of request
+            return RedirectToAction("Login", "Home");
         }
     }
 

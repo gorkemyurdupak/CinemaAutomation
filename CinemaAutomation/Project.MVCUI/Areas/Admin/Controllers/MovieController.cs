@@ -1,5 +1,6 @@
 ﻿using Project.BLL.RepositoryPattern.ConcreteRepository;
 using Project.MODEL.Entities;
+using Project.MVCUI.AuthenticationClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
 {
+    [AdminAuthentication]
     public class MovieController : Controller
     {
         MovieRepository movp;
