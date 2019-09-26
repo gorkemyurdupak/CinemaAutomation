@@ -10,6 +10,7 @@ namespace Project.MODEL.Entities
 {
     public class AppUser:BaseEntity
     {
+        public int UserID { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool IsBanned { get; set; }
@@ -21,7 +22,7 @@ namespace Project.MODEL.Entities
         public bool SmsMessage { get; set; }   //Kayıt ekranında kullanılacak. 
         public string UserComment { get; set; }
         public int EmailID { get; set; }
-        public string ResetPasswordCode { get; set; }
+        public Guid? ResetPasswordCode { get; set; }
         public string Email { get; set; }
         public DateTime? ConfirmedDate { get; set; }
         public Progress MembershipProgress { get; set; }

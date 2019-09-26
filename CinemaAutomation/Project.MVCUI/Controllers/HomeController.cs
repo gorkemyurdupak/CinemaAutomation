@@ -49,7 +49,7 @@ namespace Project.MVCUI.Controllers
 
             aprep.Add(item); // buradan sonra item'in id'si olusmus oluyor...O yüzden item2'nin id'sini verecek isek buradan sonra vermeliyiz.
 
-            item2.ID = item.ID;
+            item2.ID = item.UserID;
 
             apdrep.Add(item2);
 
@@ -157,7 +157,7 @@ namespace Project.MVCUI.Controllers
             {
                 string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + item.ResetPasswordCode + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
 
-                MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama");
+                MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama Talebi");
             }
             else
             {
@@ -165,14 +165,14 @@ namespace Project.MVCUI.Controllers
             }
             return View();
         }
-        public ActionResult ResetPassword()
+        public ActionResult ResetPassword(int id)
         {
-            return View();
+            return View(aprep.GetByID(id));
         }
         [HttpPost]
         public ActionResult ResetPassword(AppUser item)
         {
-            
+            aprep.Update(item);
             return View();
         }
     }
