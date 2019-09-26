@@ -38,7 +38,7 @@
                 @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Şifre" })
 
                 <label class="checkbox">
-                    <input type="checkbox" value="remember-me"> Beni Hatırla
+                    @Html.CheckBox("Hatirla") Beni Hatırla
                     <span class="pull-right">
                         <a href="/Home/ForgotPassword" data-toggle="modal"> Şifremi Unuttum</a>
                     </span>

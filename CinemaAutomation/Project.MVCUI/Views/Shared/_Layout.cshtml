@@ -31,7 +31,7 @@
                         <small class="site-description">Keyifli Seyirler</small>
                     </div>
                 </a> <!-- #branding -->
-
+                
                 <div class="top-nav">
                     <!--search & user info start-->
                     <ul class="nav pull-right top-menu">
@@ -43,11 +43,10 @@
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up">
-                                    
+
                                     <li><img src="~/OuterTools/movie_review/images/icon-contact-user.png" /> @Html.ActionLink("Üye OL", "Register", "Home", new { id = "" }, null)</li> </br>
 
                                     <li><img src="~/OuterTools/movie_review/images/loginp.png" />  @Html.ActionLink("Giriş Yap", "Login", "Home", new { id = "" }, null) </li>
-
 
                                 </div>
                             </ul>
@@ -64,14 +63,30 @@
                         <li class="menu-item ">@Html.ActionLink("Hakkımızda", "About")</li>
                         <li class="menu-item ">@Html.ActionLink("Filmler", "Movies")</li>
                         <li class="menu-item">@Html.ActionLink("İletişim", "ContactUs")</li>
+
                     </ul> <!-- .menu -->
-    
+
                     <form action="#" class="search-form">
                         <input type="text" placeholder="Ara...">
                         <button><i class="fa fa-search"></i></button>
                     </form>
+                    
                 </div> <!-- .main-navigation -->
+                <br /> 
+                <div class="list-group">
+                    <br /> <br>
+                           <div class="ui-corner-left">
 
+                               @if (Session["admin"] != null || Session["SuperAdmin"] != null)
+                               {
+                               <li style="background-color:purple" class="btn btn-warning">
+                                   <a href="../Admin/RealMovie/MovieList">Admin Panel</a>
+                               </li>
+                                }
+
+                                   
+                      </div>
+                </div>
                 <div class="mobile-navigation"></div>
             </div>
         </header>

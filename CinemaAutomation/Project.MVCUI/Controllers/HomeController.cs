@@ -80,12 +80,29 @@ namespace Project.MVCUI.Controllers
 
         public ActionResult Login()
         {
-            return View();
+            AppUser newUser = CheckCookie();
+            if (newUser == null) return View();
+
+            else return View(newUser);
+            
         }
 
         [HttpPost]
-        public ActionResult Login(AppUser item)
+        public ActionResult Login(AppUser item,string Hatirla)
         {
+            if (Hatirla == "true")
+            {
+                //Eger hatirlanma secenegi işaretli ise Cookiee burada yaratılır.
+                HttpCookie girisIsim = new HttpCookie("userName");
+                girisIsim.Expires = DateTime.Now.AddMinutes(5);
+                girisIsim.Value = item.UserName;
+                Response.Cookies.Add(girisIsim);
+
+                HttpCookie girisSifre = new HttpCookie("password");
+                girisSifre.Expires = DateTime.Now.AddMinutes(10);
+                girisSifre.Value = item.Password;
+                Response.Cookies.Add(girisSifre);
+            }
             if (aprep.Any
              (
              x => x.UserName == item.UserName &&
@@ -174,6 +191,30 @@ namespace Project.MVCUI.Controllers
         {
             aprep.Update(item);
             return View();
+        }
+        public AppUser CheckCookie()
+        {
+            string userName = string.Empty, password = string.Empty;
+
+            AppUser cookiedeSaklanan = null;
+
+            //Var olan bir cookie Request property'si ile kontrol edilebilir.
+            if (Request.Cookies["userName"] != null && Request.Cookies["password"] != null)
+            {
+                userName = Request.Cookies["userName"].Value;
+                password = Request.Cookies["password"].Value;
+            }
+            //Asagıda Cookie null olmasa bile Cookie'nin degerinin (firstName ve password'un) bos veya null olmadıgını garantiledik.
+            if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
+            {
+                cookiedeSaklanan = new AppUser
+                {
+                    UserName = userName,
+                    Password = password
+                };
+            }
+
+            return cookiedeSaklanan;
         }
     }
 
