@@ -11,8 +11,8 @@ namespace Project.MODEL.Entities
     {
         public int SalonID { get; set; }
         [Required]
-        [MaxLength(2)]//sinemayı büyütüp 10 veya üzeri salon açarlarsa diye önlemdir.
-        public byte[] SalonNumber { get; set; } 
+        [Range(1,15)]//sinemayı büyütüp 10 veya üzeri salon açarlarsa diye önlemdir.
+        public short SalonNumber { get; set; } 
 
         [Required]
         [Range(1,300)]

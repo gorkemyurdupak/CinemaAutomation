@@ -30,7 +30,7 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new SeatMap());
             modelBuilder.Configurations.Add(new SpecialDayMap());
             modelBuilder.Configurations.Add(new TicketMap());
-            modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
+            //modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
         }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppUserProfile> AppUserProfiles { get; set; }

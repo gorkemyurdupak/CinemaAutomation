@@ -10,7 +10,7 @@ namespace Project.MODEL.Entities
     public class Seans: BaseEntity
     {
         public int SeansID { get; set; }
-        [DisplayFormat(DataFormatString = "{dddd, dd MMMM yyyy HH:mm:ss}")]
+        
         public DateTime SeansTime { get; set; } 
 
         

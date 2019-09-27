@@ -15,7 +15,7 @@ namespace Project.MODEL.Entities
         public string Password { get; set; }
         public bool IsBanned { get; set; }
         public bool IsActive { get; set; }
-      /*  [Compare("Password")]*/ //todo gerek olup olmadığı tartışılır.Şifrelerin eşleşmesini kontrol ediyor.Burada tek soru var, farklı farklı yerlerden çağırılırsa örneğin,login panelde bu özelliklere erişince confirmpasswordu de beraberinde getirir mi ? Eğer bu tarz bir sorun çıkarmayacaksa, compare kullanıp mapteki ignore'u kaldırmak daha iyi.
+        [Compare("Password")]
         public string ConfirmPassword { get; set; }
         public Guid? ActivationCode { get; set; }
         public Role UserRole { get; set; }
