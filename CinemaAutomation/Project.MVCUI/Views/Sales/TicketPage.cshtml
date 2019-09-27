@@ -17,7 +17,7 @@
         <div class="col-md-12">
             <section class="panel ">
                 <div class="pro-img-box ">
-                    <img style="" src="@item.ImagePath" />
+                    <img style="width:366px;height:255px;" src="@item.ImagePath" />
 
                     <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
 
@@ -25,10 +25,7 @@
                 </div>
 
 
-                <div class="row">
-                    Bilet Tarihi: <input type="date" id="picker">
-                    @item.Date.DayOfWeek
-                </div>
+                
 
                 <!-- create datepicker whenever you need, i'm creating on document ready-->
 
@@ -39,11 +36,11 @@
                             @item.Name
                         </a>
                     </h4>
-                    <ul>
-                        <li>
-                            @item.Date.DayOfWeek
-                        </li>
-                    </ul>
+                    
+                    <div class="row">
+                        Bilet Tarihi: <input type="date" id="picker">
+                        @item.Date.DayOfWeek
+                    </div>
                 </div>
             </section>
 
