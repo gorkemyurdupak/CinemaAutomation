@@ -10,7 +10,7 @@ namespace Project.COMMON.Tools
     public static class MailSender
     {
       
-        public static void Send(string receiver,string password="Sinema123",string body="Deneme",string subject="Test",string sender="cineflexyonetim@outlook.com")
+        public static void Send(string receiver,string password="123456asd",string body="Deneme",string subject="Test",string sender="CineFlexYonetimm@outlook.com")
         {
 
             MailAddress senderEmail = new MailAddress(sender);
