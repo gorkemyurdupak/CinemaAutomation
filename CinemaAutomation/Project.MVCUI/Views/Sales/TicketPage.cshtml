@@ -11,56 +11,68 @@
 
 @using (Html.BeginForm())
 {
-<div class="row movie-list">
-    @foreach (CartItem item in Model.Sepetim)
-    {
-        <div class="col-md-12">
-            <section class="panel ">
-                <div class="pro-img-box ">
-                    <img style="width:366px;height:255px;" src="@item.ImagePath" />
+    <div class="row movie-list">
+        @foreach (CartItem item in Model.Sepetim)
+        {
+            <div class="col-md-4" style="background-position-x:right;background-position-y:right">
+                <section class="panel">
+                    @for (int i = 0; i < 49; i++)
+                    {
+                        <button style="background-color:violet;color:red">@i.ToString()</button>
+                    }
+                    <br />
+                    <br />
+                    <button disabled style="background-color:black;color:white;position:relative;left:30px;width:300px;height:28px;"><h3>P  E  R  D  E</h3></button>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="panel ">
+                    <div class="pro-img-box ">
+                        <img style="width:366px;height:255px;" src="@item.ImagePath" />
 
-                    <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
+                        <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
 
-                    </a>
-                </div>
-
-
-                
-
-                <!-- create datepicker whenever you need, i'm creating on document ready-->
-
-
-                <div class="panel-body text">
-                    <h4>
-                        <a href="/Member/SingleMovie/@item.ID" class="pro-title">
-                            @item.Name
                         </a>
-                    </h4>
-                    
-                    <div class="row">
-                        Bilet Tarihi: <input type="date" id="picker">
-                        @item.Date.DayOfWeek
+
+
                     </div>
-                </div>
-            </section>
 
-        </div>
-    }
+                    <!-- create datepicker whenever you need, i'm creating on document ready-->
 
-    <div class="row">
-        <div class='col-sm-3'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+
+                    <div class="panel-body text">
+                        <h4>
+                            <a href="/Member/SingleMovie/@item.ID" class="pro-title">
+                                @item.Name
+                            </a>
+                        </h4>
+
+                        <div class="row">
+
+                            Bilet Tarihi: <input type="date" id="picker">
+                            @item.Date.DayOfWeek
+
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        }
+
+        <div class="row">
+            <div class='col-sm-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 
 }
 <script>
@@ -78,50 +90,50 @@
     //    });
     //});
     $(function () {
-   var bindDatePicker = function() {
-		$(".date").datetimepicker({
-        format:'YYYY-MM-DD',
-			icons: {
-				time: "fa fa-clock-o",
-				date: "fa fa-calendar",
-				up: "fa fa-arrow-up",
-				down: "fa fa-arrow-down"
-			}
-		}).find('input:first').on("blur",function () {
-			// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
-			// update the format if it's yyyy-mm-dd
-			var date = parseDate($(this).val());
+        var bindDatePicker = function () {
+            $(".date").datetimepicker({
+                format: 'YYYY-MM-DD',
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            }).find('input:first').on("blur", function () {
+                // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+                // update the format if it's yyyy-mm-dd
+                var date = parseDate($(this).val());
 
-			if (! isValidDate(date)) {
-				//create date based on momentjs (we have that)
-				date = moment().format('YYYY-MM-DD');
-			}
+                if (!isValidDate(date)) {
+                    //create date based on momentjs (we have that)
+                    date = moment().format('YYYY-MM-DD');
+                }
 
-			$(this).val(date);
-		});
-	}
-   
-   var isValidDate = function(value, format) {
-		format = format || false;
-		// lets parse the date to the best of our knowledge
-		if (format) {
-			value = parseDate(value);
-		}
+                $(this).val(date);
+            });
+        }
 
-		var timestamp = Date.parse(value);
+        var isValidDate = function (value, format) {
+            format = format || false;
+            // lets parse the date to the best of our knowledge
+            if (format) {
+                value = parseDate(value);
+            }
 
-		return isNaN(timestamp) == false;
-   }
-   
-   var parseDate = function(value) {
-		var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
-		if (m)
-			value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+            var timestamp = Date.parse(value);
 
-		return value;
-   }
-   
-   bindDatePicker();
- });
+            return isNaN(timestamp) == false;
+        }
+
+        var parseDate = function (value) {
+            var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+            if (m)
+                value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+
+            return value;
+        }
+
+        bindDatePicker();
+    });
 
 </script>
