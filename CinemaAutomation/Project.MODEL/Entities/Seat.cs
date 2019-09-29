@@ -17,6 +17,12 @@ namespace Project.MODEL.Entities
         [MaxLength(1)]
         public byte[] SeatLetter { get; set; } //Hangi sıra olduğu e-f-g  vs...
 
+        public bool IsEmpty { get; set; }
+
+        public Seat()
+        {
+            IsEmpty = true;
+        }
         //Relational Properties
         public virtual Salon Salon { get; set; }
         public virtual Ticket Ticket { get; set; }

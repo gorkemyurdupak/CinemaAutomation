@@ -84,7 +84,6 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.xml
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csprojAssemblyReference.cache
-C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.csproj.CopyComplete
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.DAL\obj\Debug\Project.DAL.pdb

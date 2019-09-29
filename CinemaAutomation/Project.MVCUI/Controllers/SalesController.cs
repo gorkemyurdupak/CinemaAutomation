@@ -33,6 +33,8 @@ namespace Project.MVCUI.Controllers
 
             Movie eklenecekFilm = movp.GetByID(id);
             Ticket eklenecekUcret = new Ticket();
+            Seat s = new Seat();
+            
 
             CartItem ci = new CartItem();
             ci.ID = eklenecekFilm.MovieID;
@@ -40,6 +42,10 @@ namespace Project.MVCUI.Controllers
             ci.Price = eklenecekUcret.TicketPrice;
             ci.ImagePath = eklenecekFilm.ImagePath;
             ci.Date = new Seans().SeansTime;
+            ci.EmptyControl = s.IsEmpty;
+            ci.ChairID = s.SeatID;
+            ci.Price = eklenecekUcret.TicketPrice;
+            //ci.TicketType = eklenecekUcret.TicketSalesType;
             c.SepeteEkle(ci);
 
             Session["scart"] = c;

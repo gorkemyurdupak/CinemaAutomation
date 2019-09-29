@@ -60,7 +60,6 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.xml
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csprojAssemblyReference.cache
-C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csproj.CoreCompileInputs.cache
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.csproj.CopyComplete
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MAP\obj\Debug\Project.MAP.pdb

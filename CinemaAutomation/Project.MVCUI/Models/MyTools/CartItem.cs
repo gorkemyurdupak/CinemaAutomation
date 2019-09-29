@@ -17,6 +17,9 @@ namespace Project.MVCUI.Models.MyTools
         public DateTime Date { get; set; }
         public string ImagePath { get; set; }
 
+        public bool EmptyControl { get; set; }
+        public int ChairID { get; set; }
+        public TicketType TicketType { get; set; }
         public decimal SubTotal
         {
             get
@@ -30,6 +33,6 @@ namespace Project.MVCUI.Models.MyTools
         {
             Amount = 1;
         }
-        public enum TicketType { }
+        
     }
 }

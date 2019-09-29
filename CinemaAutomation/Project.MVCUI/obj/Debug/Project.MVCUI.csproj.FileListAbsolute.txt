@@ -416,7 +416,6 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\bin\Project.MAP.pdb
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\bin\Project.MAP.dll.config
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.csprojAssemblyReference.cache
-C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.csproj.CoreCompileInputs.cache
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.csproj.CopyComplete
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.MVCUI\obj\Debug\Project.MVCUI.pdb

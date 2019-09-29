@@ -72,7 +72,6 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\bin\Debug\Project.MAP.pdb
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\bin\Debug\Project.MAP.dll.config
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csprojAssemblyReference.cache
-C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csproj.CoreCompileInputs.cache
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.csproj.CopyComplete
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.BLL\obj\Debug\Project.BLL.pdb

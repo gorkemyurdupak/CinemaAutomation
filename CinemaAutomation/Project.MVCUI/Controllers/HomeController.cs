@@ -180,7 +180,8 @@ namespace Project.MVCUI.Controllers
         {
             if (aprep.Any(x => x.Email == item.Email))
             {
-                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + item.ID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
+               
+                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + item.EmailID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
 
                 MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama Talebi");
             }
@@ -191,9 +192,9 @@ namespace Project.MVCUI.Controllers
             ViewBag.Message ="Şifre sıfırlaması için mail gönderildi.Lütfen e-posta kutunuzu kontrol ediniz.";
             return View();
         }
-        public ActionResult ResetPassword(int id)
+        public ActionResult ResetPassword()
         {
-            return View(aprep.GetByID(id));
+            return View();
             
         }
         [HttpPost]
