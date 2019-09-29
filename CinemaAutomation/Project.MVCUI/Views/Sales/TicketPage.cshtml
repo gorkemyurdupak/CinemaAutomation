@@ -17,101 +17,104 @@
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 <style>
-    .backgroundColor {
-        background-color: red;
-    }
+   .vote-btn{
+    background:blue;
+    color:white;
+   
+}
 </style>
 
 @using (Html.BeginForm())
 {
-    <div class="row movie-list">
-        @foreach (CartItem item in Model.Sepetim)
-        {
-            <div class="col-md-4" style="background-position-x:right;background-position-y:right">
-                <section class="panel">
-                    @for (int i = 0; i < 49; i++)
+<div class="row movie-list">
+    @foreach (CartItem item in Model.Sepetim)
+    {
+        <div class="col-md-4" style="background-position-x:right;background-position-y:right">
+            <section class="panel">
+                @for (int i = 0; i < 49; i++)
+                {
+
+                    if (item.ChairID + i == @i && item.EmptyControl == true)
                     {
 
-                        if (item.ChairID + i == @i && item.EmptyControl == true)
-                        {
-                            <button onclick="changeButtonColor()" id="@i" style="background-color:green;color:red">@i.ToString()</button>
-                            <script>
-                                function changeButtonColor() {
-
-                                    document.getElementById("@i").style.backgroundColor = "violet";
-
-                                }
-
-                            </script>
-
-                        }
-                        else
-                        {
-                            <button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>
-
-                        }
-                    }
-                    <br />
-                    <br />
-                    <button disabled style="background-color:black;color:white;position:relative;left:30px;width:300px;height:28px;"><h3>P  E  R  D  E</h3></button>
-                </section>
-            </div>
-            <div class="col-md-6">
-                <section class="panel ">
-                    <div class="pro-img-box ">
-                        <img style="width:366px;height:255px;" src="@item.ImagePath" />
-
-                        <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
-
-                        </a>
-
-
-                    </div>
-
-                    <!-- create datepicker whenever you need, i'm creating on document ready-->
-
-
-                    <div class="panel-body text">
-                        <h4>
-                            <a href="/Member/SingleMovie/@item.ID" class="pro-title">
-                                @item.Name
-                            </a>
-                        </h4>
-
-                        <input id="datepicker" width="270" />
+                        <button type="button" onclick="myFunction()" id="@i" style="background-color:green;color:red">@i.ToString()</button>
                         <script>
-                            $('#datepicker').datepicker({
-                                uiLibrary: 'bootstrap',
-                                dateFormat: 'dd/mm/',
-                                changeMonth: true,
-                                changeYear: false,
-                                yearRange: '-1:+1',
-                                minDate: (08 / 10 / 2019)
+                                function myFunction() {
 
+                                    document.getElementById('@i').style.backgroundColor = "red";
 
-                            });
+}
+
                         </script>
-                        @*<div class="row">
-                                <div class='col-sm-3'>
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" />
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                        </div>
+
+                    }
+                    else
+                    {
+                        <button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>
+
+                    }
+                }
+
+                <br />
+                <br />
+                <button disabled style="background-color:black;color:white;position:relative;left:30px;width:300px;height:28px;"><h3>P  E  R  D  E</h3></button>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section class="panel ">
+                <div class="pro-img-box ">
+                    <img style="width:366px;height:255px;" src="@item.ImagePath" />
+
+                    <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
+
+                    </a>
+
+
+                </div>
+
+                <!-- create datepicker whenever you need, i'm creating on document ready-->
+
+
+                <div class="panel-body text">
+                    <h4>
+                        <a href="/Member/SingleMovie/@item.ID" class="pro-title">
+                            @item.Name
+                        </a>
+                    </h4>
+
+                    <input id="datepicker" width="270" />
+                    <script>
+                        $('#datepicker').datepicker({
+
+                            uiLibrary: 'bootstrap',
+                            dateFormat: 'dd/mm/',
+                            changeMonth: true,
+                            changeYear: false,
+                            yearRange: '-1:+1',
+                            minDate: (08 / 10 / 2019),
+
+
+                        });
+                    </script>
+                    @*<div class="row">
+                            <div class='col-sm-3'>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
                                     </div>
                                 </div>
-                            </div>*@
+                            </div>
+                        </div>*@
 
-                    </div>
-                </section>
-            </div>
-        }
-
-
-
-    </div>
+                </div>
+            </section>
+        </div>
+    }
+    
+</div>
 
 }
 <script>

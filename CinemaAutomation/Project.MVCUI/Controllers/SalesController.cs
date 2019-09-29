@@ -74,7 +74,7 @@ namespace Project.MVCUI.Controllers
         }
         public ActionResult ChooseSeat()
         {   
-            return View("ChooseSeat");
+            return View();
         }
     }
 }

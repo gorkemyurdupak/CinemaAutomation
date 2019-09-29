@@ -2047,6 +2047,25 @@
     <Content Include="Scripts\MdBootstrapPersianDateTimePicker\jalaali.js" />
     <Content Include="Scripts\MdBootstrapPersianDateTimePicker\jquery.Bootstrap-PersianDateTimePicker.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="TicketPageFor\.gitignore" />
+    <Content Include="TicketPageFor\css\component.css" />
+    <Content Include="TicketPageFor\css\demo.css" />
+    <Content Include="TicketPageFor\css\normalize.css" />
+    <Content Include="TicketPageFor\favicon.ico" />
+    <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="TicketPageFor\fonts\codropsicons\license.txt" />
+    <Content Include="TicketPageFor\img\camera.svg" />
+    <Content Include="TicketPageFor\img\lookaround.svg" />
+    <Content Include="TicketPageFor\img\play.svg" />
+    <Content Include="TicketPageFor\img\seat.svg" />
+    <Content Include="TicketPageFor\img\seats.svg" />
+    <Content Include="TicketPageFor\index.html" />
+    <Content Include="TicketPageFor\js\classie.js" />
+    <Content Include="TicketPageFor\js\main.js" />
+    <Content Include="TicketPageFor\js\modernizr-custom.js" />
+    <Content Include="TicketPageFor\media\sintel.jpg" />
+    <Content Include="TicketPageFor\media\sintel.mp4" />
+    <Content Include="TicketPageFor\media\sintel.ogg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2146,6 +2165,13 @@
     <Content Include="Views\Sales\BuyTicket.cshtml" />
     <Content Include="Views\Sales\ChooseSeat.cshtml" />
     <Content Include="Views\Sales\TicketPage.cshtml" />
+    <Content Include="TicketPageFor\css\.sass-cache\f06f659efa73d6e7bef3e15945001ac4273933b6\component.scssc" />
+    <Content Include="TicketPageFor\css\component.css.map" />
+    <Content Include="TicketPageFor\css\component.scss" />
+    <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="TicketPageFor\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
