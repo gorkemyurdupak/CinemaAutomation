@@ -10,7 +10,8 @@ namespace Project.MODEL.Entities
     public class Seans: BaseEntity
     {
         public int SeansID { get; set; }
-        
+
+        [DataType(DataType.Time)]
         public DateTime SeansTime { get; set; } 
 
         

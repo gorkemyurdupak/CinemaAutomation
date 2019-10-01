@@ -17,6 +17,8 @@ namespace Project.MVCUI.Models.MyTools
         public DateTime Date { get; set; }
         public string ImagePath { get; set; }
 
+        public string SeansVakit { get; set; }
+        public int seansId { get; set; }
         public bool EmptyControl { get; set; }
         public int ChairID { get; set; }
         public TicketType TicketType { get; set; }

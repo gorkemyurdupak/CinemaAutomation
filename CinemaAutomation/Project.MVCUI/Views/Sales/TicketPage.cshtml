@@ -4,8 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
 <script src="~/Scripts/jquery-3.3.1.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
 <script src="~/Scripts/MdBootstrapPersianDateTimePicker/jquery.Bootstrap-PersianDateTimePicker.js"></script>
 <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
@@ -17,107 +19,209 @@
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 <style>
-   .vote-btn{
-    background:blue;
-    color:white;
-   
-}
+    .seat {
+            height: 40px;
+            width: 40px;
+            border: 1px solid gray;
+           cursor:pointer;
+           background-color:white;
+        }
+        .walk{
+            padding-left:20px;
+        }
 </style>
 
 @using (Html.BeginForm())
 {
-<div class="row movie-list">
-    @foreach (CartItem item in Model.Sepetim)
-    {
-        <div class="col-md-4" style="background-position-x:right;background-position-y:right">
-            <section class="panel">
-                @for (int i = 0; i < 49; i++)
-                {
+    <div class="row movie-list">
+        @foreach (CartItem item in Model.Sepetim)
+        {
+            <div class="col-md-4" style="background-position-x:right;background-position-y:right">
+                <section class="panel">
+                    <div style="border:1px solid gray; width:130px;"> @*Bu kısım karelerin gelmesini sağlıyor.For döngüsü içine alınarak sayılar yazdırılabilir.ChooseSeat mantığıyla çalışır.Her dive tek tek id vermekte bir çözüm.*@
+                        <table>
 
-                    if (item.ChairID + i == @i && item.EmptyControl == true)
+                            <tr>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+
+                            </tr>
+                            <tr>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                            </tr>
+                            <tr>
+                                
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div> </td>
+                                <td><div class="seat"></div></td>
+
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                            </tr>  
+                        </table>
+                    </div>
+                    @for (int i = 0; i < 49; i++)
                     {
 
-                        <button type="button" onclick="myFunction()" id="@i" style="background-color:green;color:red">@i.ToString()</button>
-                        <script>
+
+                        if (item.ChairID + i == @i && item.EmptyControl == true)
+                        {
+                                
+
+                            <button type="button" onclick="myFunction()" id="@i" style="background-color:green;color:red">@i.ToString()</button>
+                            <script>
                                 function myFunction() {
 
                                     document.getElementById('@i').style.backgroundColor = "red";
 
-}
-
-                        </script>
-
-                    }
-                    else
-                    {
-                        <button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>
-
-                    }
-                }
-
-                <br />
-                <br />
-                <button disabled style="background-color:black;color:white;position:relative;left:30px;width:300px;height:28px;"><h3>P  E  R  D  E</h3></button>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="panel ">
-                <div class="pro-img-box ">
-                    <img style="width:366px;height:255px;" src="@item.ImagePath" />
-
-                    <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
-
-                    </a>
-
-
-                </div>
-
-                <!-- create datepicker whenever you need, i'm creating on document ready-->
-
-
-                <div class="panel-body text">
-                    <h4>
-                        <a href="/Member/SingleMovie/@item.ID" class="pro-title">
-                            @item.Name
-                        </a>
-                    </h4>
-
-                    <input id="datepicker" width="270" />
-                    <script>
-                        $('#datepicker').datepicker({
-
-                            uiLibrary: 'bootstrap',
-                            dateFormat: 'dd/mm/',
-                            changeMonth: true,
-                            changeYear: false,
-                            yearRange: '-1:+1',
-                            minDate: (08 / 10 / 2019),
-
-
-                        });
-                    </script>
-                    @*<div class="row">
-                            <div class='col-sm-3'>
-                                <div class="form-group">
-                                    <div class='input-group date' id='datetimepicker1'>
-                                        <input type='text' class="form-control" />
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
-
-                </div>
-            </section>
-        </div>
-    }
+                        }
     
-</div>
+                            </script>
+
+                        }
+                        else
+                        {
+                            <button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>
+
+                        }
+                    }
+
+                    <br />
+                    <br />
+                    <button disabled style="background-color:black;color:white;position:relative;left:30px;width:300px;height:28px;"><h3>P  E  R  D  E</h3></button>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="panel ">
+                    <div class="pro-img-box ">
+                        <img style="width:366px;height:255px;" src="@item.ImagePath" />
+
+                        <a href="@Url.Action("DeleteFromCart", "Member", new { id = item.ID })">
+
+                        </a>
+
+
+                    </div>
+
+                    <!-- create datepicker whenever you need, i'm creating on document ready-->
+
+
+                    <div class="panel-body text">
+                        <h4>
+                            <a href="/Member/SingleMovie/@item.ID" class="pro-title">
+                                @item.Name
+                            </a>
+                        </h4>
+                       
+                        @item.Date.ToString("dd HH:mm:")
+
+                        <input id="datepicker" width="270" />
+                        <script>
+                            $('#datepicker').datepicker({
+
+                                uiLibrary: 'bootstrap',
+                                dateFormat: 'dd-mm-yyyy',
+                                changeMonth: true,
+                                changeYear: false,
+                                yearRange: '-1:+1',
+                                minDate: (08 / 10 / 2019)
+
+
+                            });
+                        </script>
+                        <input type="text" id="datetime" readonly>
+                        <script>
+                             var today = new Date();
+    $("#datetime").datetimepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        todayBtn: true,
+        startDate: today,
+         weekStart: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+        
+    });
+                        </script>
+                        
+
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-default" type="button">@Html.ActionLink("İptal Et", "Movies", "Member", null, new { @class = "btn btn-navbar" })</button>
+                            <button style="background-color:green;color:wheat;" type="button">@Html.ActionLink("Koltuk Seçimine Git", "ChooseSeat")</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        }
+
+    </div>
 
 }
 <script>
+    allSeats = document.querySelectorAll('.seat');
+        for (var i = 0; i < allSeats.length; i++) {
+            var seat = allSeats[i];
+            seat.addEventListener('click', function () {
+                var bgclr = this.style.backgroundColor;
+                if(bgclr =='red')
+                    this.style.backgroundColor = 'white'
+                else
+                    this.style.backgroundColor = 'green'
+                debugger
+            }, false);
+        }
 
 
     //$(function () {
