@@ -15,18 +15,18 @@ namespace Project.MODEL.Entities
         public short TicketCount { get; set; }
         public TicketGenre TicketGenre { get; set; } //öğrenci,vip vs bileti.
         public DateTime? TicketDay { get; set; }
-        public decimal Discount
-        {
-            get
-            {
-                if (TicketGenre == TicketGenre.Student)
-                {
-                    Discount = 0.4m;
-                }
-                return Discount;
-            }
-            set { }
-        }
+        //public decimal Discount
+        //{
+        //    get
+        //    {
+        //        if (TicketGenre == TicketGenre.Student)
+        //        {
+        //            Discount = 0.4m;
+        //        }
+        //        return Discount;
+        //    }
+        //    set { }
+        //}
 
         public Ticket()
         {

@@ -84,62 +84,62 @@ namespace Project.MVCUI.Controllers
                 return View(Tuple.Create(new Ticket(), new PaymentVM()));
             }
 
-            TempData["message"] = "Üye olmadan sipariş veremezsiniz";
+            TempData["message"] = "Üye olmadan/Giriş yapmadan bilet alamazsınız ";
 
             return RedirectToAction("Index","Member");
         }
-        //[HttpPost]
-        //public ActionResult SiparisiOnayla([Bind(Prefix = "Item1")] Ticket item, [Bind(Prefix = "Item2")] PaymentVM item2)
-        //{
-        //    //Burada artık bir client olarak Api'a istek göndermemiz lazım(Api consume)..Bunun icin WebApiClient package'ini Nuget'tan indiriyoruz..
+        [HttpPost]
+        public ActionResult SiparisiOnayla([Bind(Prefix = "Item1")] Ticket item, [Bind(Prefix = "Item2")] PaymentVM item2)
+        {
+            //Burada artık bir client olarak Api'a istek göndermemiz lazım(Api consume)..Bunun icin WebApiClient package'ini Nuget'tan indiriyoruz..
 
-        //    //Bir Api consume etme sürecinde actıgımız degişkenleri veya nesneler veya sürecleri ram'de cok uzun süre tutmamalıyız.
-        //    bool result;
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("http://localhost:44317/api/");
+            //Bir Api consume etme sürecinde actıgımız degişkenleri veya nesneler veya sürecleri ram'de cok uzun süre tutmamalıyız.
+            bool result;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:44317/api/");
 
-        //        var postTask = client.PostAsJsonAsync("Payment/ReceivePayment", item2);
-        //        //Burada item2 nesnesini Json olarak gönderiyoruz...Ve Base Adresimizin üzerine Payment/ReceivePayment'i ekliyoruz..
-        //        var sonuc = postTask.Result;
+                var postTask = client.PostAsJsonAsync("Payment/ReceivePayment", item2);
+                //Burada item2 nesnesini Json olarak gönderiyoruz...Ve Base Adresimizin üzerine Payment/ReceivePayment'i ekliyoruz..
+                var sonuc = postTask.Result;
 
-        //        if (sonuc.IsSuccessStatusCode)
-        //        {
-        //            result = true;
-        //        }
-        //        else
-        //        {
-        //            result = false;
-        //        }
-        //    }
-        //    if (result)
-        //    {
-        //        AppUser kullanici = Session["member"] as AppUser;
-        //        item.AppUserID = kullanici.ID; //Order'in kim tarafından sipariş edildigini belirliyoruz.
-        //        tickp.Add(item); //save edildiginde Order nesnesinin ID'si olusacak..
-        //        int sonSiparisID = item.TicketID;
-        //        Cart sepet = Session["scart"] as Cart;
+                if (sonuc.IsSuccessStatusCode)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            if (result)
+            {
+                AppUser kullanici = Session["member"] as AppUser;
+                item.TicketID = kullanici.UserID; //Order'in kim tarafından sipariş edildigini belirliyoruz.
+                tickp.Add(item); //save edildiginde Order nesnesinin ID'si olusacak..
+                int sonSiparisID = item.TicketID;
+                Cart sepet = Session["scart"] as Cart;
 
-        //        foreach (CartItem urun in sepet.Sepetim)
-        //        {
-        //            Ticket t = new Ticket();
-        //            t.OrderID = sonSiparisID;
-        //            od.ProductID = urun.ID;
-        //            od.TotalPrice = urun.SubTotal;
-        //            od.Quantity = urun.Amount;
-        //            odrep.Add(od);
+                foreach (CartItem urun in sepet.Sepetim)
+                {
+                    Ticket t = new Ticket();
+                    t.TicketID = sonSiparisID;
+                    t.Movie.MovieID = urun.ID;
+                    t.TicketPrice = urun.SubTotal;
+                    t.TicketCount = urun.Amount;
+                    tickp.Add(t);
 
-        //        }
-        //        TempData["odeme"] = "Siparişiniz bize ulasmıstır..Teşekkür ederiz";
-        //        return RedirectToAction("Index");
+                }
+                TempData["odeme"] = "Siparişiniz bize ulasmıstır..Teşekkür ederiz";
+                return RedirectToAction("Index","Member");
 
-        //    }
-        //    else
-        //    {
-        //        TempData["odeme"] = "Odeme ile ilgili bir sıkıntı olustu.Lutfen banka ile iletişime geciniz";
-        //        return RedirectToAction("Index");
-        //    }
-        //}
+            }
+            else
+            {
+                TempData["odeme"] = "Ödeme ile ilgili bir sıkıntı oluştu.Lütfen banka ile iletişime geciniz";
+                return RedirectToAction("Index","Member");
+            }
+        }
         public ActionResult BuyTicket()
         {
             Ticket t = new Ticket();

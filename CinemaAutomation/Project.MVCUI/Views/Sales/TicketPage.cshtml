@@ -40,7 +40,19 @@
                 <section class="panel">
                     <div style="border:1px solid gray; width:130px;"> @*Bu kısım karelerin gelmesini sağlıyor.For döngüsü içine alınarak sayılar yazdırılabilir.ChooseSeat mantığıyla çalışır.Her dive tek tek id vermekte bir çözüm.*@
                         <table>
+                            <tr>
+                                <td><div class="">A</div></td>
+                                <td><div class=""></div> </td>
+                                <td><div class=""></div></td>
+                                <td><div class="">A</div></td>
+                                <td><div class=""></div> </td>
+                                <td><div class=""></div></td>
 
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+                                <td><div class="seat"></div></td>
+
+                            </tr>
                             <tr>
                                 <td><div class="seat"></div></td>
                                 <td><div class="seat"></div> </td>
@@ -199,8 +211,10 @@
 
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default" type="button">@Html.ActionLink("İptal Et", "Movies", "Member", null, new { @class = "btn btn-navbar" })</button>
-                            <button style="background-color:green;color:wheat;" type="button">@Html.ActionLink("Koltuk Seçimine Git", "ChooseSeat")</button>
+                            <button style="background-color:green;color:wheat;" type="button">
+                                @Html.ActionLink("Bilet AL", "SiparisiOnayla") </button>
                         </div>
+                        <button style="background-color:darkred;color:black;" type="button">@Html.ActionLink("Koltukları buraya tıklayarak görebilirsiniz", "ChooseSeat")</button>
                     </div>
                 </section>
             </div>

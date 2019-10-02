@@ -12,6 +12,8 @@ namespace Project.MODEL.Entities
         public int EmployeeID { get; set; }
         public string EmpFirstName { get; set; }
         public string EmpLastName { get; set; }
+        public string EmpUserName { get; set; }
+        public string Password { get; set; }
         public DateTime? BirthDate { get; set; }
         public DateTime? HireDate { get; set; }
         public string Title { get; set; }  //buradan alttaki sınıra kadar boş geçilecek. ((adress dahil)

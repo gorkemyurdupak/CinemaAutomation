@@ -2176,6 +2176,7 @@
     <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.ttf" />
     <Content Include="TicketPageFor\fonts\codropsicons\codropsicons.woff" />
     <Content Include="TicketPageFor\README.md" />
+    <Content Include="Views\Sales\SiparisiOnayla.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
