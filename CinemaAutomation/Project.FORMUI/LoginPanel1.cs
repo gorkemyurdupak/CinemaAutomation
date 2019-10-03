@@ -16,8 +16,11 @@ namespace Project.FormUI
 {
     public partial class LoginPanel1 : Form
     {
-        MyContext db;
+        MyContext db = DBTool.DBInstance;
         EmployeeRepository emprep;
+
+        //List<Employee> emplist = db.Employees.ToList();
+
         public LoginPanel1()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace Project.FormUI
                 string password = txtPass.Text;
                 if (emprep.Any(x => x.EmpUserName == UserName) && (emprep.Any(x => x.Password==password)))
                 {
-                    MessageBox.Show("Helal beee giriş başarılı");
+                    MessageBox.Show("Giriş Başarılı");
                 }
                 else if (emprep.Any(x=> x.EmpUserName==UserName)&&(emprep.Any(x=> x.Password!=password)))
                 {
@@ -50,6 +53,10 @@ namespace Project.FormUI
                 }
 
             }
+            else
+            {
+                MessageBox.Show("Lütfen kullanıcı adı ve şifrenizi giriniz.");
+            }
         }
 
         public void Temizle()
@@ -59,7 +66,7 @@ namespace Project.FormUI
         }
         private void LoginPanel1_Load(object sender, EventArgs e)
         {
-            db = DBTool.DBInstance;
+          
             emprep = new EmployeeRepository();
         }
     }

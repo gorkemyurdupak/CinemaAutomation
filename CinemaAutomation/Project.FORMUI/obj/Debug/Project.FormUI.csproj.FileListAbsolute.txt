@@ -45,3 +45,4 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.pdb
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.HomePage2.resources
