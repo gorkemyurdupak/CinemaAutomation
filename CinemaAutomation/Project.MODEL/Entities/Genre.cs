@@ -8,6 +8,10 @@ namespace Project.MODEL.Entities
 {
    public class Genre: BaseEntity
     {
+        public override string ToString()
+        {
+            return GenreName;
+        }
         public int GenreID { get; set; }
         public string GenreName { get; set; }
         public string Description { get; set; } //Neden burada //todo 

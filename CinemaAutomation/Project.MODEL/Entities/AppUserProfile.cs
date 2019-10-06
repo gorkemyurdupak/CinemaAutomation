@@ -13,7 +13,7 @@ namespace Project.MODEL.Entities
         public string UserFirstName { get; set; }
         public string UserLastName { get; set; }
         public string Address { get; set; }
-        
+
         [Required]
         [MaxLength(10)]
         [DataType(DataType.PhoneNumber)]

@@ -11,7 +11,6 @@ namespace Project.MODEL.Entities
     {
         public int SeansID { get; set; }
 
-        [DataType(DataType.Time)]
         public DateTime SeansTime { get; set; } 
 
         

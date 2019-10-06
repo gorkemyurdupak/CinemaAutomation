@@ -18,8 +18,12 @@ namespace Project.FormUI
     {
         MyContext db = DBTool.DBInstance;
         EmployeeRepository emprep;
+        AppUserRepository aprep;
 
-        //List<Employee> emplist = db.Employees.ToList();
+        public void ListEmployees()
+        {
+            db.Employees.ToList();
+        }
 
         public LoginPanel1()
         {
@@ -28,34 +32,55 @@ namespace Project.FormUI
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text!=string.Empty&& txtPass.Text!=string.Empty)
+            if (txtUser.Text != string.Empty && txtPass.Text != string.Empty)
             {
-                string UserName = txtUser.Text;
+                string userName = txtUser.Text;
                 string password = txtPass.Text;
-                if (emprep.Any(x => x.EmpUserName == UserName) && (emprep.Any(x => x.Password==password)))
+
+                if (aprep.Any(x => x.UserName == userName) && emprep.Any(x => x.Password == password))
                 {
-                    MessageBox.Show("Giriş Başarılı");
+                    AppUser yakalanan=aprep.Default(x=> x.UserName==userName&& x.Password==password);
+                    if (yakalanan.UserRole==MODEL.Enums.Role.SuperAdmin)
+                    {
+                        this.Hide();
+                        SuperAdminPanel sp = new SuperAdminPanel();
+                        sp.Show();
+                    }
+                    else if (yakalanan.UserRole == MODEL.Enums.Role.Admin)
+                    {
+                        this.Hide();
+                        FilmDüzenleme admp = new FilmDüzenleme();
+                        admp.Show();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        HomePage2 h = new HomePage2();
+                        h.Show();
+                    }
+                          
+                  
                 }
-                else if (emprep.Any(x=> x.EmpUserName==UserName)&&(emprep.Any(x=> x.Password!=password)))
+                else if (emprep.Any(x => x.EmpUserName == userName) && (emprep.Any(x => x.Password != password)))
                 {
                     MessageBox.Show("Şifreniz hatalıdır.Lütfen şifrenizi kontrol ediniz.");
                     Temizle();
                 }
-                else if (emprep.Any(x=> x.EmpUserName!=UserName)&&(emprep.Any(x=> x.Password==password)))
+                else if (emprep.Any(x => x.EmpUserName != userName) && (emprep.Any(x => x.Password == password)))
                 {
                     MessageBox.Show("Kullanıcı adınız hataılıdır.Lütfen kullanıcı adınıız kontrol ediniz.");
                     Temizle();
-                   
+
                 }
-                else
+                else if (userName == String.Empty && password == String.Empty)
                 {
-                    MessageBox.Show("Giriş Başarısız.Lütfen bilgilerinizi kontrol ediniz.");
+                    MessageBox.Show("Lütfen alanları doldurunuz.");
                 }
 
             }
             else
             {
-                MessageBox.Show("Lütfen kullanıcı adı ve şifrenizi giriniz.");
+                MessageBox.Show("Lütfen doğru bilgileri giriniz.");
             }
         }
 
@@ -66,8 +91,8 @@ namespace Project.FormUI
         }
         private void LoginPanel1_Load(object sender, EventArgs e)
         {
-          
             emprep = new EmployeeRepository();
+            aprep = new AppUserRepository();
         }
     }
 }

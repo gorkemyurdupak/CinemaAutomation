@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.MODEL.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,7 +22,7 @@ namespace Project.MVCUI.Models.MyTools
         public int seansId { get; set; }
         public bool EmptyControl { get; set; }
         public int ChairID { get; set; }
-        public TicketType TicketType { get; set; }
+        public TicketGenre TicketGenre { get; set; }
         public decimal SubTotal
         {
             get

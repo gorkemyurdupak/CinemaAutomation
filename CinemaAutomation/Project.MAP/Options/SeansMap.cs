@@ -12,7 +12,7 @@ namespace Project.MAP.Options
         public SeansMap()
         {
             Ignore(x => x.ID);
-            Property(x => x.SeansTime).IsRequired();
+            //Property(x => x.SeansTime).IsRequired();
         }
     }
 }

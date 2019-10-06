@@ -1,5 +1,6 @@
 ﻿using Project.BLL.RepositoryPattern.ConcreteRepository;
 using Project.MODEL.Entities;
+using Project.MODEL.Enums;
 using Project.MVCUI.Models.MyTools;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,7 @@ namespace Project.MVCUI.Controllers
             ci.EmptyControl = s.IsEmpty;
             ci.ChairID = s.SeatID;
             ci.Price = eklenecekUcret.TicketPrice;
-            //ci.TicketType = eklenecekUcret.TicketSalesType;
+            ci.TicketGenre = eklenecekUcret.TicketGenre;
             c.SepeteEkle(ci);
 
             Session["scart"] = c;

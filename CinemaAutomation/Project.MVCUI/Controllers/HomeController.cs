@@ -180,8 +180,8 @@ namespace Project.MVCUI.Controllers
         {
             if (aprep.Any(x => x.Email == item.Email))
             {
-               
-                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + item.EmailID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
+                AppUser yakalanan = aprep.Default(x => x.Email == item.Email);
+                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + yakalanan.EmailID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
 
                 MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama Talebi");
             }

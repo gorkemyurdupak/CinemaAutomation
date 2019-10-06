@@ -180,19 +180,36 @@
 
                         <input id="datepicker" width="270" />
                         <script>
-                            $('#datepicker').datepicker({
+                            //$('#datepicker').datepicker({
 
-                                uiLibrary: 'bootstrap',
-                                dateFormat: 'dd-mm-yyyy',
-                                changeMonth: true,
-                                changeYear: false,
-                                yearRange: '-1:+1',
-                                minDate: (08 / 10 / 2019)
+                            //    uiLibrary: 'bootstrap',
+                            //    dateFormat: 'dd-mm-yyyy',
+                            //    changeMonth: true,
+                            //    changeYear: false,
+                            //    yearRange: '-1:+1',
+                            //    minDate: (08 / 10 / 2019)
 
 
-                            });
+                            //});
+                             var date = new Date();
+        var firstDay = new Date(date.getFullYear(), date.getMonth(), date.getDay);
+        var bitisTarihi = new Date();
+        var year = bitisTarihi.getFullYear() + 1;
+        var mounth = bitisTarihi.getMonth() + 1;
+        var today = bitisTarihi.getDate();
+
+        if (mounth < 10) {
+            mounth = '0' + mounth;
+        }
+        if (today < 10) {
+            today = '0' + today;
+        }
+        var firstYear = today + "/" + mounth + "/" + year;
+      
+        $('#datepicker').datepicker("setDate", firstDay);25/06/2019
+                            $('#datepicker').attr("value", firstYear);
                         </script>
-                        <input type="text" id="datetime" readonly>
+                        @*<input type="text" id="datetime" readonly>
                         <script>
                              var today = new Date();
     $("#datetime").datetimepicker({
@@ -206,7 +223,7 @@
         forceParse: 0
         
     });
-                        </script>
+                        </script>*@
                         
 
                         <div class="modal-footer">
