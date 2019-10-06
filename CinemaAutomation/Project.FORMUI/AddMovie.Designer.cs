@@ -48,6 +48,7 @@
             this.lblResim = new System.Windows.Forms.Label();
             this.pcAfis = new System.Windows.Forms.PictureBox();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.btnResim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcAfis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,7 +204,6 @@
             this.cmbFilmTur.Name = "cmbFilmTur";
             this.cmbFilmTur.Size = new System.Drawing.Size(262, 21);
             this.cmbFilmTur.TabIndex = 15;
-            this.cmbFilmTur.SelectedIndexChanged += new System.EventHandler(this.cmbFilmTur_SelectedIndexChanged);
             // 
             // lblResim
             // 
@@ -237,6 +237,17 @@
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // btnResim
+            // 
+            this.btnResim.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnResim.Location = new System.Drawing.Point(422, 638);
+            this.btnResim.Name = "btnResim";
+            this.btnResim.Size = new System.Drawing.Size(95, 29);
+            this.btnResim.TabIndex = 19;
+            this.btnResim.Text = "Resim Ekle";
+            this.btnResim.UseVisualStyleBackColor = false;
+            this.btnResim.Click += new System.EventHandler(this.btnResim_Click);
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +255,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(897, 691);
+            this.Controls.Add(this.btnResim);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.pcAfis);
             this.Controls.Add(this.lblResim);
@@ -293,5 +305,6 @@
         private System.Windows.Forms.Label lblResim;
         private System.Windows.Forms.PictureBox pcAfis;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnResim;
     }
 }

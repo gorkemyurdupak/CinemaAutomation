@@ -49,13 +49,13 @@
                         <td>@item.Format</td>
                         <td>@item.MovieSummary</td>
                         <td>@item.ShowDate</td>
-                        @if (item.MovieGenre == null)
+                        @if (item.Genre == null)
                         {
                             <td class="hidden-phone">Kategorisi Yok</td>
                         }
                         else
                         {
-                            <td class="hidden-phone">@item.MovieGenre.GenreName</td>
+                            <td class="hidden-phone">@item.Genre.GenreName</td>
                         }
 
 

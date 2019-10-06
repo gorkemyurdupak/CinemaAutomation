@@ -10,12 +10,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.Text.RegularExpressions;
+
 
 namespace Project.FormUI
 {
     public partial class AddMovie : Form
     {
         MovieRepository mvp = new MovieRepository();
+
         public AddMovie()
         {
             InitializeComponent();
@@ -23,6 +27,7 @@ namespace Project.FormUI
 
         public void FilmEkle()
         {
+            Genre g = new Genre();
             Movie m = new Movie();
             m.MovieName = txtName.Text;
             m.ShowDate = Convert.ToDateTime(txtShowDate.Text);
@@ -31,26 +36,35 @@ namespace Project.FormUI
             m.ScreenTime = Convert.ToInt32(txtTime.Text);
             m.Director = txtDirector.Text;
             m.Actors = txtActors.Text;
-            m.ImagePath = pcAfis.ImageLocation;
-            
+            string path = pcAfis.ImageLocation;
+            string newPath = path.Remove(0, 102).Replace("\\", " /");
+            //pcAfis.ImageLocation = newPath;
+            m.ImagePath = newPath;
+            m.GenreID = cmbFilmTur.SelectedIndex;
+            g.GenreID = m.GenreID;
             mvp.Add(m);
-            mvp.Save();
+           
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
             FilmEkle();
         }
-
-        private void cmbFilmTur_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-
-        }
         GenreRepository grp = new GenreRepository();
-        private void AddMovie_Load(object sender, EventArgs e)
+        public void AddMovie_Load(object sender, EventArgs e)
         {
              
             cmbFilmTur.DataSource = grp.SelectAll();
+        }
+
+        private void btnResim_Click(object sender, EventArgs e)
+        {
+            pcAfis.SizeMode = PictureBoxSizeMode.StretchImage;
+            OpenFileDialog op = new OpenFileDialog();
+            op.ShowDialog();
+            pcAfis.Image = Image.FromFile(op.FileName);
+            pcAfis.ImageLocation = op.FileName;
+
+
         }
     }
 }

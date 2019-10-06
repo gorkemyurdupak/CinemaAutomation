@@ -176,8 +176,6 @@
                             </a>
                         </h4>
                        
-                        @item.Date.ToString("dd HH:mm:")
-
                         <input id="datepicker" width="270" />
                         <script>
                             //$('#datepicker').datepicker({
@@ -191,45 +189,46 @@
 
 
                             //});
-                             var date = new Date();
-        var firstDay = new Date(date.getFullYear(), date.getMonth(), date.getDay);
-        var bitisTarihi = new Date();
-        var year = bitisTarihi.getFullYear() + 1;
-        var mounth = bitisTarihi.getMonth() + 1;
-        var today = bitisTarihi.getDate();
+                            var date = new Date();
+                            var firstDay = new Date(date.getFullYear(), date.getMonth(), date.getDay);
+                            var bitisTarihi = new Date();
+                            var year = bitisTarihi.getFullYear() + 1;
+                            var mounth = bitisTarihi.getMonth() + 1;
+                            var today = bitisTarihi.getDate();
 
-        if (mounth < 10) {
-            mounth = '0' + mounth;
-        }
-        if (today < 10) {
-            today = '0' + today;
-        }
-        var firstYear = today + "/" + mounth + "/" + year;
-      
-        $('#datepicker').datepicker("setDate", firstDay);25/06/2019
+                            if (mounth < 10) {
+                                mounth = '0' + mounth;
+                            }
+                            if (today < 10) {
+                                today = '0' + today;
+                            }
+                            var firstYear = today + "/" + mounth + "/" + year;
+
+                            $('#datepicker').datepicker("setDate", firstDay); 25 / 06 / 2019
                             $('#datepicker').attr("value", firstYear);
                         </script>
                         @*<input type="text" id="datetime" readonly>
-                        <script>
-                             var today = new Date();
-    $("#datetime").datetimepicker({
-        format: 'dd-mm-yyyy',
-        autoclose: true,
-        todayBtn: true,
-        startDate: today,
-         weekStart: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-        
-    });
-                        </script>*@
-                        
+                            <script>
+                                 var today = new Date();
+        $("#datetime").datetimepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            todayBtn: true,
+            startDate: today,
+             weekStart: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+
+        });
+                            </script>*@
+
 
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default" type="button">@Html.ActionLink("İptal Et", "Movies", "Member", null, new { @class = "btn btn-navbar" })</button>
                             <button style="background-color:green;color:wheat;" type="button">
-                                @Html.ActionLink("Bilet AL", "SiparisiOnayla") </button>
+                                @Html.ActionLink("Bilet AL", "SiparisiOnayla")
+                            </button>
                         </div>
                         <button style="background-color:darkred;color:black;" type="button">@Html.ActionLink("Koltukları buraya tıklayarak görebilirsiniz", "ChooseSeat")</button>
                     </div>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Project.MODEL.Entities
 {
     public class Movie: BaseEntity
     {
+        
         public int GenreID { get; set; }
         public int MovieID { get; set; }
         public string MovieName { get; set; }
@@ -38,7 +40,7 @@ namespace Project.MODEL.Entities
         //Relational Properties
         public virtual List<Ticket> Tickets { get; set; }
         public virtual List<Salon> Salons { get; set; }
-        public virtual Genre MovieGenre { get; set; }
+        public virtual Genre Genre { get; set; }
         public virtual List<MovieSeans> MovieSeanss { get; set; }
 
     }
