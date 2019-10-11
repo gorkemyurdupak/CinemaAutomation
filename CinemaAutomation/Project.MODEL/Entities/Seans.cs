@@ -9,6 +9,10 @@ namespace Project.MODEL.Entities
 {
     public class Seans: BaseEntity
     {
+        public override string ToString()
+        {
+            return SeansTime.ToString();
+        }
         public int SeansID { get; set; }
 
         public DateTime SeansTime { get; set; } 

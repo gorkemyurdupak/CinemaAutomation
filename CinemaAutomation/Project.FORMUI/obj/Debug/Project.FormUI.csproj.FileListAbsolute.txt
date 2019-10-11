@@ -51,3 +51,7 @@ C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAu
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.SuperAdminPanel.resources
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.AddEmployee.resources
 C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.AddMovie.resources
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.UpdateMovie.resources
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.UpdateEmployee.resources
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Project.FormUI.BuyTicket.resources
+C:\Users\Burak\Desktop\Visual Studio Projeler\Projeler\SinemaOtomGuncel\CinemaAutomation\Project.FormUI\obj\Debug\Sinema_Programı.SinemaRezervasyonProjesi.resources

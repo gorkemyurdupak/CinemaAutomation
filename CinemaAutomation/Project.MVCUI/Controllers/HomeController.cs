@@ -181,7 +181,7 @@ namespace Project.MVCUI.Controllers
             if (aprep.Any(x => x.Email == item.Email))
             {
                 AppUser yakalanan = aprep.Default(x => x.Email == item.Email);
-                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + yakalanan.EmailID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.";
+                string gonderilecekMail = "Şifre sıfırlama talebiniz oluşturuldu. https://localhost:44317/Home/ResetPassword/" + yakalanan.EmailID + " linkine tıklayarak şifrenizi sıfırlayabilirsiniz.Kullanıcı adınız:"+item.UserName ;
 
                 MailSender.Send(item.Email, password: "Sinema123", body: gonderilecekMail, subject: "Şifre Sıfırlama Talebi");
             }
@@ -200,8 +200,32 @@ namespace Project.MVCUI.Controllers
         [HttpPost]
         public ActionResult ResetPassword(AppUser item)
         {
-            aprep.Update(item);
-            return View();
+            if (aprep.Any(x => x.Email == item.Email) && item.UserRole==Role.Member)
+            {
+                AppUser resetlenecek = aprep.Default(x => x.Email == item.Email);
+                resetlenecek.IsActive = true;
+                resetlenecek.EmailID = item.EmailID;
+                aprep.Update(item);
+            }
+            else if (aprep.Any(x=> x.Email==item.Email) && item.UserRole==Role.Admin)
+            {
+                AppUser resetlenecek = aprep.Default(x => x.Email == item.Email);
+                resetlenecek.IsActive = true;
+                resetlenecek.UserRole = Role.Admin;
+                resetlenecek.EmailID = item.EmailID;
+                aprep.Update(item);
+            }
+            else if (aprep.Any(x=> x.Email==item.Email) && item.UserRole==Role.SuperAdmin)
+            {
+                AppUser resetlenecek = aprep.Default(x => x.Email == item.Email);
+                resetlenecek.IsActive = true;
+                resetlenecek.IsActive = item.IsActive;
+                resetlenecek.UserRole = Role.SuperAdmin;
+                resetlenecek.EmailID = item.EmailID;
+                aprep.Update(item);
+            }
+            TempData["SifremiUnuttum"] = "Şifreniz başarıyla değiştirildi.";
+            return RedirectToAction("Login","Home");
         }
         public AppUser CheckCookie()
         {

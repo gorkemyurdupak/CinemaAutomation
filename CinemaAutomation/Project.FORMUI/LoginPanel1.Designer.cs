@@ -97,7 +97,7 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Name = "LoginPanel1";
-            this.Text = "Form1";
+            this.Text = "Login Panel";
             this.Load += new System.EventHandler(this.LoginPanel1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

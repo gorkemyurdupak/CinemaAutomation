@@ -68,6 +68,7 @@
             this.FilmSil.TabIndex = 2;
             this.FilmSil.Text = "Film Sil";
             this.FilmSil.UseVisualStyleBackColor = false;
+            this.FilmSil.Click += new System.EventHandler(this.FilmSil_Click);
             // 
             // btnFilmGuncelle
             // 
@@ -79,6 +80,7 @@
             this.btnFilmGuncelle.TabIndex = 3;
             this.btnFilmGuncelle.Text = "Film Güncelle";
             this.btnFilmGuncelle.UseVisualStyleBackColor = false;
+            this.btnFilmGuncelle.Click += new System.EventHandler(this.btnFilmGuncelle_Click);
             // 
             // btnGeriDon
             // 

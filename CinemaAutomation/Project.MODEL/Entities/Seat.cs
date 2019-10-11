@@ -11,11 +11,11 @@ namespace Project.MODEL.Entities
     {
         public int SeatID { get; set; }
         [Required] //data annotationlar kontrol edilecek.MaxLength'ler decimal,short vs de farklı mı olacak ? 
-        [MaxLength(2)] //üstte yazdığım şey dal katmanında da yapılabiliyor.
-        public byte[] SeatNumber { get; set; } // Hangi Numara olduğu => G-1 ,F-3 .. 
+      
+        public short SeatNumber { get; set; } // Hangi Numara olduğu => G-1 ,F-3 .. 
         [Required]
         [MaxLength(1)]
-        public byte[] SeatLetter { get; set; } //Hangi sıra olduğu e-f-g  vs...
+        public string SeatLetter { get; set; } //Hangi sıra olduğu e-f-g  vs...
 
         public bool IsEmpty { get; set; }
 

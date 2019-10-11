@@ -9,6 +9,10 @@ namespace Project.MODEL.Entities
 {
     public class Employee : BaseEntity
     {
+        public override string ToString()
+        {
+            return $"{EmpFirstName} {EmpLastName} , ID= {EmployeeID} , Rütbesi: {Title}";
+        }
         public int EmployeeID { get; set; }
         public string EmpFirstName { get; set; }
         public string EmpLastName { get; set; }

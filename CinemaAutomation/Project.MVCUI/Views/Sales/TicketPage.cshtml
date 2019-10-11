@@ -3,6 +3,68 @@
     ViewBag.Title = "TicketPage";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <title>Bilet Satın Al</title>
+
+    <style>
+        .seat {
+            height: 40px;
+            width: 40px;
+            border: 1px solid gray;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .walk {
+            padding-left: 20px;
+        }
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 11px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+    </style>
+</head>
 <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
 <script src="~/Scripts/bootstrap.js"></script>
 <script src="~/Scripts/jquery-3.3.1.js"></script>
@@ -18,133 +80,93 @@
 <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
-<style>
-    .seat {
-            height: 40px;
-            width: 40px;
-            border: 1px solid gray;
-           cursor:pointer;
-           background-color:white;
-        }
-        .walk{
-            padding-left:20px;
-        }
-</style>
+
+
+
 
 @using (Html.BeginForm())
 {
+
     <div class="row movie-list">
+
+
         @foreach (CartItem item in Model.Sepetim)
         {
             <div class="col-md-4" style="background-position-x:right;background-position-y:right">
+
                 <section class="panel">
-                    <div style="border:1px solid gray; width:130px;"> @*Bu kısım karelerin gelmesini sağlıyor.For döngüsü içine alınarak sayılar yazdırılabilir.ChooseSeat mantığıyla çalışır.Her dive tek tek id vermekte bir çözüm.*@
+                    <div style="border:1px solid gray; width:130px;">
+
                         <table>
-                            <tr>
-                                <td><div class="">A</div></td>
-                                <td><div class=""></div> </td>
-                                <td><div class=""></div></td>
-                                <td><div class="">A</div></td>
-                                <td><div class=""></div> </td>
-                                <td><div class=""></div></td>
 
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
+                            <td>
+                                <label class="container">
+                                    1
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
 
-                            </tr>
-                            <tr>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
 
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
+                            <td>
+                                <label class="container">
+                                    2
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
 
-                            </tr>
-                            <tr>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
 
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                            </tr>
-                            <tr>
-                                
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
+                            <td>
+                                <label class="container">
+                                    3
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">
+                                    4
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
 
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                            </tr>
-                            <tr>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div> </td>
-                                <td><div class="seat"></div></td>
-
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                                <td><div class="seat"></div></td>
-                            </tr>  
                         </table>
+
+
                     </div>
+
                     @for (int i = 0; i < 49; i++)
                     {
 
 
                         if (item.ChairID + i == @i && item.EmptyControl == true)
                         {
-                                
 
-                            <button type="button" onclick="myFunction()" id="@i" style="background-color:green;color:red">@i.ToString()</button>
+                            @*<label class="container">
+
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>*@
+
+
+
+
+                            @*<button type="button" onclick="myFunction()" id="@i" style="background-color:green;color:red">@i.ToString()</button>*@
                             <script>
                                 function myFunction() {
 
-                                    document.getElementById('@i').style.backgroundColor = "red";
+                                    document.getElementById('@i').style.backgroundColor = "green";
 
                         }
-    
+
                             </script>
 
                         }
                         else
                         {
-                            <button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>
+                            @*<button disabled id="@i" style="background-color:red;color:white">@i.ToString()</button>*@
 
                         }
                     }
@@ -175,20 +197,10 @@
                                 @item.Name
                             </a>
                         </h4>
-                       
+
                         <input id="datepicker" width="270" />
                         <script>
-                            //$('#datepicker').datepicker({
 
-                            //    uiLibrary: 'bootstrap',
-                            //    dateFormat: 'dd-mm-yyyy',
-                            //    changeMonth: true,
-                            //    changeYear: false,
-                            //    yearRange: '-1:+1',
-                            //    minDate: (08 / 10 / 2019)
-
-
-                            //});
                             var date = new Date();
                             var firstDay = new Date(date.getFullYear(), date.getMonth(), date.getDay);
                             var bitisTarihi = new Date();
@@ -206,22 +218,25 @@
 
                             $('#datepicker').datepicker("setDate", firstDay); 25 / 06 / 2019
                             $('#datepicker').attr("value", firstYear);
+                            $("#datepicker").ready(function () {
+                                $.datepicker.setDefaults($.datepicker.regional["tr"]);
+                            })
                         </script>
                         @*<input type="text" id="datetime" readonly>
-                            <script>
-                                 var today = new Date();
-        $("#datetime").datetimepicker({
-            format: 'dd-mm-yyyy',
-            autoclose: true,
-            todayBtn: true,
-            startDate: today,
-             weekStart: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
+                                                <script>
+                                                     var today = new Date();
+                            $("#datetime").datetimepicker({
+                                format: 'dd-mm-yyyy',
+                                autoclose: true,
+                                todayBtn: true,
+                                startDate: today,
+                                 weekStart: 1,
+                                startView: 2,
+                                minView: 2,
+                                forceParse: 0
 
-        });
-                            </script>*@
+                            });
+                                                </script>*@
 
 
                         <div class="modal-footer">
@@ -239,19 +254,32 @@
     </div>
 
 }
+
+<script>
+    type =”text / javascript”>
+        $(document).ready(function () {
+            $.datepicker.setDefaults($.datepicker.regional["tr"]);
+        });
+
+</script>
+<script type=”text/javascript”>
+    $( document ).ready(function() {
+         $.datepicker.setDefaults($.datepicker.regional["tr"]);
+    });
+</script>
 <script>
     allSeats = document.querySelectorAll('.seat');
-        for (var i = 0; i < allSeats.length; i++) {
-            var seat = allSeats[i];
-            seat.addEventListener('click', function () {
-                var bgclr = this.style.backgroundColor;
-                if(bgclr =='red')
-                    this.style.backgroundColor = 'white'
-                else
-                    this.style.backgroundColor = 'green'
-                debugger
-            }, false);
-        }
+    for (var i = 0; i < allSeats.length; i++) {
+        var seat = allSeats[i];
+        seat.addEventListener('click', function () {
+            var bgclr = this.style.backgroundColor;
+            if (bgclr == 'red')
+                this.style.backgroundColor = 'white'
+            else
+                this.style.backgroundColor = 'green'
+            debugger
+        }, false);
+    }
 
 
     //$(function () {

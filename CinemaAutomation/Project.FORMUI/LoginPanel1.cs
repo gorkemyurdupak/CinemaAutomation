@@ -37,7 +37,7 @@ namespace Project.FormUI
                 string userName = txtUser.Text;
                 string password = txtPass.Text;
 
-                if (aprep.Any(x => x.UserName == userName) && emprep.Any(x => x.Password == password))
+                if (aprep.Any(x => x.UserName == userName) && aprep.Any(x => x.Password == password))
                 {
                     AppUser yakalanan=aprep.Default(x=> x.UserName==userName&& x.Password==password);
                     if (yakalanan.UserRole==MODEL.Enums.Role.SuperAdmin)
@@ -61,12 +61,12 @@ namespace Project.FormUI
                           
                   
                 }
-                else if (emprep.Any(x => x.EmpUserName == userName) && (emprep.Any(x => x.Password != password)))
+                else if (aprep.Any(x => x.UserName == userName) && (aprep.Any(x => x.Password != password)))
                 {
                     MessageBox.Show("Şifreniz hatalıdır.Lütfen şifrenizi kontrol ediniz.");
                     Temizle();
                 }
-                else if (emprep.Any(x => x.EmpUserName != userName) && (emprep.Any(x => x.Password == password)))
+                else if (aprep.Any(x => x.UserName != userName) && (aprep.Any(x => x.Password == password)))
                 {
                     MessageBox.Show("Kullanıcı adınız hataılıdır.Lütfen kullanıcı adınıız kontrol ediniz.");
                     Temizle();

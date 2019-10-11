@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployee));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -46,19 +46,19 @@
             this.textBox1.Size = new System.Drawing.Size(251, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // txtLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(318, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtLastName.Location = new System.Drawing.Point(318, 209);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(251, 20);
+            this.txtLastName.TabIndex = 1;
             // 
-            // textBox3
+            // txtTitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(318, 281);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtTitle.Location = new System.Drawing.Point(318, 281);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(251, 20);
+            this.txtTitle.TabIndex = 2;
             // 
             // txtName
             // 
@@ -123,8 +123,8 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.textBox1);
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
@@ -136,8 +136,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLastName;

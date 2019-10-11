@@ -73,6 +73,12 @@
     <Compile Include="AdminPanel3.Designer.cs">
       <DependentUpon>AdminPanel3.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyTicket.Designer.cs">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilmDüzenleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +99,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinemaRezervasyonProjesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinemaRezervasyonProjesi.designer.cs">
+      <DependentUpon>SinemaRezervasyonProjesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuperAdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SuperAdminPanel.Designer.cs">
       <DependentUpon>SuperAdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMovie.Designer.cs">
+      <DependentUpon>UpdateMovie.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
@@ -107,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPanel3.resx">
       <DependentUpon>AdminPanel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyTicket.resx">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FilmDüzenleme.resx">
       <DependentUpon>FilmDüzenleme.cs</DependentUpon>
@@ -126,8 +153,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SinemaRezervasyonProjesi.resx">
+      <DependentUpon>SinemaRezervasyonProjesi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuperAdminPanel.resx">
       <DependentUpon>SuperAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMovie.resx">
+      <DependentUpon>UpdateMovie.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

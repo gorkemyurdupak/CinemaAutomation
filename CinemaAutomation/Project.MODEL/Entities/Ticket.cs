@@ -9,6 +9,10 @@ namespace Project.MODEL.Entities
 {
     public class Ticket: BaseEntity
     {
+        public override string ToString()
+        {
+            return TicketGenre.ToString();
+        }
         public int TicketID { get; set; }
         public TicketSalesType TicketSalesType { get; set; } //internetten mi yoksa gişeden mi olduğunu belirtiyor.
         public decimal TicketPrice { get; set; }

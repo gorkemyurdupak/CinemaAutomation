@@ -25,7 +25,7 @@ namespace Project.BLL.RepositoryPattern.ConcreteRepository
             item.Status = DataStatus.Updated;
 
             item.ModifiedDate = DateTime.Now;
-            AppUser toBeUpdated = GetByID(item.EmailID);
+            AppUser toBeUpdated = GetByID(item.ID);
 
             db.Entry(toBeUpdated).CurrentValues.SetValues(item);
             Save();

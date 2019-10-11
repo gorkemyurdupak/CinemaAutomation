@@ -10,7 +10,10 @@ namespace Project.MODEL.Entities
 {
     public class Movie: BaseEntity
     {
-        
+        public override string ToString()
+        {
+            return MovieName;
+        }
         public int GenreID { get; set; }
         public int MovieID { get; set; }
         public string MovieName { get; set; }

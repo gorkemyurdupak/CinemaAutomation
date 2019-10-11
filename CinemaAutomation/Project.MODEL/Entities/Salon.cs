@@ -9,6 +9,10 @@ namespace Project.MODEL.Entities
 {
     public class Salon: BaseEntity
     {
+        public override string ToString()
+        {
+            return SalonNumber.ToString();
+        }
         public int SalonID { get; set; }
         [Required]
         [Range(1,15)]//sinemayı büyütüp 10 veya üzeri salon açarlarsa diye önlemdir.
